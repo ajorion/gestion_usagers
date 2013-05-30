@@ -42,10 +42,15 @@ namespace gestion_usagers
             columnheader2.Width = 120;
             columnheader2.TextAlign = HorizontalAlignment.Left;
 
+            ColumnHeader columnheader3 = new ColumnHeader();
+            columnheader3.Text = "Juge des enfants";
+            columnheader3.TextAlign = HorizontalAlignment.Left;
+
             
             listView1.Columns.Add(columnheader0);
             listView1.Columns.Add(columnheader1);
             listView1.Columns.Add(columnheader2);
+            listView1.Columns.Add(columnheader3);
             
             try
             {
@@ -63,6 +68,7 @@ namespace gestion_usagers
                         ListViewItem lvi = new ListViewItem(status["type_statut"].ToString());
                         lvi.SubItems.Add(status["date_debut"].ToString());
                         lvi.SubItems.Add(status["date_fin"].ToString());
+                        lvi.SubItems.Add(status["nom_juge"].ToString() + " - " + status["tpe"].ToString());
                         listView1.Items.Add(lvi);
                         
                     }

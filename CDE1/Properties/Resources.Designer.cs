@@ -73,16 +73,6 @@ namespace gestion_usagers.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logo_CDE {
-            get {
-                object obj = ResourceManager.GetObject("logo CDE", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap sauver {
             get {
                 object obj = ResourceManager.GetObject("sauver", resourceCulture);

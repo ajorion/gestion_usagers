@@ -109,11 +109,6 @@
               Recherche une ressource localisée de type System.Drawing.Bitmap.
             </summary>
         </member>
-        <member name="P:gestion_usagers.Properties.Resources.logo_CDE">
-            <summary>
-              Recherche une ressource localisée de type System.Drawing.Bitmap.
-            </summary>
-        </member>
         <member name="P:gestion_usagers.Properties.Resources.sauver">
             <summary>
               Recherche une ressource localisée de type System.Drawing.Bitmap.

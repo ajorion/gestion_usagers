@@ -50,23 +50,27 @@ namespace gestion_usagers
 
         public static SQLiteDataReader listeStatuts (string id_enfant)
         {
+            
             m_dbConnection = new SQLiteConnection(db);
 
             m_dbConnection.Open();
             
-            string query = string.Format(@"SELECT statuts.id_statut, statuts.id_enfant, statuts.date_debut, statuts.date_fin,
-                            type_statuts.id_statut, type_statuts.type_statut
-                            FROM statuts, type_statuts
+            string query = string.Format(@"SELECT statuts.id_statut, statuts.id_enfant, statuts.date_debut, statuts.date_fin, statuts.id_juge,
+                            type_statuts.id_statut, type_statuts.type_statut,
+                            juges.id_juge, juges.nom_juge, juges.tpe
+                            FROM statuts, type_statuts, juges
                             WHERE statuts.id_enfant='{0}'
-                            AND statuts.id_statut=type_statuts.id_statut", id_enfant);
+                            AND statuts.id_statut=type_statuts.id_statut
+                            AND statuts.id_juge=juges.id_juge", id_enfant);
             
             SQLiteCommand command = new SQLiteCommand(query, m_dbConnection);
 
-            SQLiteDataReader reader = command.ExecuteReader();
+            SQLiteDataReader reader = command.ExecuteReader();            
 
             return reader;
-
+            
             m_dbConnection.Close();
+
         }
     }
 
