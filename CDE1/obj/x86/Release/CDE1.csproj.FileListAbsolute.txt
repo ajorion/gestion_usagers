@@ -1,0 +1,55 @@
+C:\Users\ajorion\Documents\Visual Studio 2010\Projects\CDE1\CDE1\bin\Release\CDE1.exe.config
+C:\Users\ajorion\Documents\Visual Studio 2010\Projects\CDE1\CDE1\bin\Release\CDE1.exe
+C:\Users\ajorion\Documents\Visual Studio 2010\Projects\CDE1\CDE1\bin\Release\CDE1.pdb
+C:\Users\ajorion\Documents\Visual Studio 2010\Projects\CDE1\CDE1\obj\x86\Release\CDE1.csprojResolveAssemblyReference.cache
+C:\Users\ajorion\Documents\Visual Studio 2010\Projects\CDE1\CDE1\obj\x86\Release\CDE.AboutBox1.resources
+C:\Users\ajorion\Documents\Visual Studio 2010\Projects\CDE1\CDE1\obj\x86\Release\CDE.AdmissionForm.resources
+C:\Users\ajorion\Documents\Visual Studio 2010\Projects\CDE1\CDE1\obj\x86\Release\CDE.Form1.resources
+C:\Users\ajorion\Documents\Visual Studio 2010\Projects\CDE1\CDE1\obj\x86\Release\CDE.bd_operations.resources
+C:\Users\ajorion\Documents\Visual Studio 2010\Projects\CDE1\CDE1\obj\x86\Release\CDE.LoginForm.resources
+C:\Users\ajorion\Documents\Visual Studio 2010\Projects\CDE1\CDE1\obj\x86\Release\CDE.Properties.Resources.resources
+C:\Users\ajorion\Documents\Visual Studio 2010\Projects\CDE1\CDE1\obj\x86\Release\CDE1.csproj.GenerateResource.Cache
+C:\Users\ajorion\Documents\Visual Studio 2010\Projects\CDE1\CDE1\obj\x86\Release\CDE1.exe
+C:\Users\ajorion\Documents\Visual Studio 2010\Projects\CDE1\CDE1\obj\x86\Release\CDE1.pdb
+C:\Users\ajorion\Documents\Visual Studio 2010\Projects\CDE1\CDE1\bin\Release\System.Data.SQLite.xml
+C:\Users\ajorion\Documents\Visual Studio 2010\Projects\CDE1\CDE1\bin\Release\System.Data.SQLite.dll
+C:\Users\ajorion\Documents\Visual Studio 2010\Projects\CDE1\CDE1\bin\Release\System.Data.SQLite.Linq.dll
+C:\Users\ajorion\Documents\Visual Studio 2010\Projects\CDE1\CDE1\bin\Release\System.Data.SQLite.Linq.xml
+C:\Users\ajorion\Documents\Visual Studio 2010\Projects\CDE1\CDE1\obj\x86\Release\CDE.ConsultDossier.resources
+C:\Users\ajorion\Documents\GitHub\gestion_usagers\CDE1\obj\x86\Release\CDE1.csprojResolveAssemblyReference.cache
+C:\Users\ajorion\Documents\GitHub\gestion_usagers\CDE1\obj\x86\Release\CDE.AboutBox1.resources
+C:\Users\ajorion\Documents\GitHub\gestion_usagers\CDE1\obj\x86\Release\CDE.AdmissionForm.resources
+C:\Users\ajorion\Documents\GitHub\gestion_usagers\CDE1\obj\x86\Release\CDE.ConsultDossier.resources
+C:\Users\ajorion\Documents\GitHub\gestion_usagers\CDE1\obj\x86\Release\CDE.Form1.resources
+C:\Users\ajorion\Documents\GitHub\gestion_usagers\CDE1\obj\x86\Release\CDE.bd_operations.resources
+C:\Users\ajorion\Documents\GitHub\gestion_usagers\CDE1\obj\x86\Release\CDE.LoginForm.resources
+C:\Users\ajorion\Documents\GitHub\gestion_usagers\CDE1\obj\x86\Release\CDE.Properties.Resources.resources
+C:\Users\ajorion\Documents\GitHub\gestion_usagers\CDE1\obj\x86\Release\CDE1.csproj.GenerateResource.Cache
+C:\Users\ajorion\Documents\GitHub\gestion_usagers\CDE1\obj\x86\Release\CDE1.exe
+C:\Users\ajorion\Documents\GitHub\gestion_usagers\CDE1\obj\x86\Release\CDE1.pdb
+C:\Users\ajorion\Documents\GitHub\gestion_usagers\CDE1\bin\Release\CDE1.exe.config
+C:\Users\ajorion\Documents\GitHub\gestion_usagers\CDE1\bin\Release\CDE1.XML
+C:\Users\ajorion\Documents\GitHub\gestion_usagers\CDE1\bin\Release\CDE1.exe
+C:\Users\ajorion\Documents\GitHub\gestion_usagers\CDE1\bin\Release\CDE1.pdb
+C:\Users\ajorion\Documents\GitHub\gestion_usagers\CDE1\bin\Release\System.Data.SQLite.dll
+C:\Users\ajorion\Documents\GitHub\gestion_usagers\CDE1\bin\Release\System.Data.SQLite.Linq.dll
+C:\Users\ajorion\Documents\GitHub\gestion_usagers\CDE1\bin\Release\System.Data.SQLite.xml
+C:\Users\ajorion\Documents\GitHub\gestion_usagers\CDE1\bin\Release\System.Data.SQLite.Linq.xml
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\bin\Release\System.Data.SQLite.dll
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\bin\Release\System.Data.SQLite.Linq.dll
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\bin\Release\System.Data.SQLite.xml
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\bin\Release\System.Data.SQLite.Linq.xml
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\obj\x86\Release\CDE1.csprojResolveAssemblyReference.cache
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\obj\x86\Release\CDE1.csproj.GenerateResource.Cache
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\obj\x86\Release\gestion_usagers.AboutBox1.resources
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\obj\x86\Release\gestion_usagers.AdmissionForm.resources
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\obj\x86\Release\gestion_usagers.ConsultDossier.resources
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\obj\x86\Release\gestion_usagers.Form1.resources
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\obj\x86\Release\gestion_usagers.LoginForm.resources
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\obj\x86\Release\gestion_usagers.Properties.Resources.resources
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\bin\Release\Gestion_usagers.exe.config
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\bin\Release\Gestion_usagers.xml
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\bin\Release\Gestion_usagers.exe
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\bin\Release\Gestion_usagers.pdb
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\obj\x86\Release\Gestion_usagers.exe
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\obj\x86\Release\Gestion_usagers.pdb

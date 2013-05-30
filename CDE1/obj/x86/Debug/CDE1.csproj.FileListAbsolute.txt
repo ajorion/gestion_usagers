@@ -1,0 +1,16 @@
+C:\Users\ajorion\documents\visual studio 2010\Projects\CDE1\CDE1\bin\Debug\CDE1.exe.config
+C:\Users\ajorion\documents\visual studio 2010\Projects\CDE1\CDE1\bin\Debug\CDE1.exe
+C:\Users\ajorion\documents\visual studio 2010\Projects\CDE1\CDE1\bin\Debug\CDE1.pdb
+C:\Users\ajorion\documents\visual studio 2010\Projects\CDE1\CDE1\obj\x86\Debug\CDE.Form1.resources
+C:\Users\ajorion\documents\visual studio 2010\Projects\CDE1\CDE1\obj\x86\Debug\CDE.Properties.Resources.resources
+C:\Users\ajorion\documents\visual studio 2010\Projects\CDE1\CDE1\obj\x86\Debug\CDE1.exe
+C:\Users\ajorion\documents\visual studio 2010\Projects\CDE1\CDE1\obj\x86\Debug\CDE1.pdb
+C:\Users\ajorion\documents\visual studio 2010\Projects\CDE1\CDE1\obj\x86\Debug\CDE.AboutBox1.resources
+C:\Users\ajorion\Documents\Visual Studio 2010\Projects\CDE1\CDE1\obj\x86\Debug\CDE.LoginForm.resources
+C:\Users\ajorion\Documents\Visual Studio 2010\Projects\CDE1\CDE1\obj\x86\Debug\CDE1.csprojResolveAssemblyReference.cache
+C:\Users\ajorion\Documents\Visual Studio 2010\Projects\CDE1\CDE1\obj\x86\Debug\CDE1.csproj.GenerateResource.Cache
+C:\Users\ajorion\Documents\Visual Studio 2010\Projects\CDE1\CDE1\bin\Debug\Database2.sdf
+C:\Users\ajorion\Documents\Visual Studio 2010\Projects\CDE1\CDE1\obj\x86\Debug\CDE.AdmissionForm.resources
+C:\Users\ajorion\Documents\Visual Studio 2010\Projects\CDE1\CDE1\bin\Debug\System.Data.SQLite.dll
+C:\Users\ajorion\Documents\Visual Studio 2010\Projects\CDE1\CDE1\bin\Debug\System.Data.SQLite.pdb
+C:\Users\ajorion\Documents\Visual Studio 2010\Projects\CDE1\CDE1\obj\x86\Debug\CDE.bd_operations.resources

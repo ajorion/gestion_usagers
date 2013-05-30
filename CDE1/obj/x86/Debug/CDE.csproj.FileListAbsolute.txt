@@ -1,0 +1,11 @@
+C:\Users\ajorion\AppData\Local\Temporary Projects\CDE\bin\Debug\Database1.sdf
+C:\Users\ajorion\AppData\Local\Temporary Projects\CDE\bin\Debug\CDE.exe.config
+C:\Users\ajorion\AppData\Local\Temporary Projects\CDE\bin\Debug\CDE.exe
+C:\Users\ajorion\AppData\Local\Temporary Projects\CDE\bin\Debug\CDE.pdb
+C:\Users\ajorion\AppData\Local\Temporary Projects\CDE\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\ajorion\AppData\Local\Temporary Projects\CDE\obj\x86\Debug\CDE.Form1.resources
+C:\Users\ajorion\AppData\Local\Temporary Projects\CDE\obj\x86\Debug\CDE.Properties.Resources.resources
+C:\Users\ajorion\AppData\Local\Temporary Projects\CDE\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\ajorion\AppData\Local\Temporary Projects\CDE\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\ajorion\AppData\Local\Temporary Projects\CDE\obj\x86\Debug\CDE.exe
+C:\Users\ajorion\AppData\Local\Temporary Projects\CDE\obj\x86\Debug\CDE.pdb
