@@ -69,10 +69,22 @@ namespace gestion_usagers
                     this.Text = "Consultation d'un dossier : " + enfant["prenom"].ToString() + " " + enfant["nom"].ToString();
                     lbl_nomprenom.Text = enfant["nom"].ToString().ToUpper() + " " + enfant["prenom"].ToString();
                     toolStripLabel1.Text = "N° dossier : " + enfant["num_dossier"].ToString();
-                    txb_date_naiss.Text = enfant["date_naissance"].ToString() + " à " + enfant["lieu_naissance"].ToString();
-                    
-                    var status = Db.listeStatuts(enfant["num_dossier"].ToString());
+                    lbl_date_naiss.Text = enfant["date_naissance"].ToString() + " à " + enfant["lieu_naissance"].ToString();
+                    label5.Text = enfant["date_admission"].ToString();
+                    label6.Text = enfant["service"].ToString();
+                   
+                    if (enfant["sexe"].ToString() == "m")
+                    {
+                        sexe_img.Image = Properties.Resources._1371236677_male;
+                        sexe_img.SizeMode = PictureBoxSizeMode.CenterImage;
+                    }
+                    if (enfant["sexe"].ToString() == "f")
+                    {
+                        sexe_img.Image = Properties.Resources._1371236480_female;
+                        sexe_img.SizeMode = PictureBoxSizeMode.CenterImage;
+                    }
 
+                    var status = Db.listeStatuts(enfant["num_dossier"].ToString());
                     while (status.Read())
                     {
                         ListViewItem lvi = new ListViewItem(status["type_statut"].ToString());
@@ -102,10 +114,6 @@ namespace gestion_usagers
 
         }
 
-        private void tableLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -137,6 +145,11 @@ namespace gestion_usagers
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

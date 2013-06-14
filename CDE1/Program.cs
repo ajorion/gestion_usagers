@@ -20,8 +20,9 @@ namespace gestion_usagers
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LoginForm());
-            Debug.Indent(); 
-            Debug.Write("Lancement de l'application");
+            Debug.Indent();
+            Debug.Write(string.Format(DateTime.Now + " : Lancement de l'application"));
+            Debug.Unindent();
             
         }
     }

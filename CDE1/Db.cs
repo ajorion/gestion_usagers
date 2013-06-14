@@ -29,7 +29,7 @@ namespace gestion_usagers
             m_dbConnection = new SQLiteConnection(db);
             m_dbConnection.Open();
 
-            string query = string.Format(@"SELECT nom, prenom, date_admission, date_naissance, lieu_naissance, service, num_dossier
+            string query = string.Format(@"SELECT nom, prenom, date_admission, date_naissance, lieu_naissance, service, num_dossier, sexe
                                         FROM enfants
                                         WHERE num_dossier='{0}'",
                                         num_dossier);

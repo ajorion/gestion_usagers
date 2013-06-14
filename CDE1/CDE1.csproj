@@ -227,6 +227,11 @@
     <None Include="Resources\help-browser.png" />
     <None Include="Resources\bricks.png" />
     <None Include="Resources\system-users.png" />
+    <None Include="Resources\1371227792_User.png" />
+    <None Include="Resources\1371231478_User.png" />
+    <None Include="Resources\1371235139_Child_Male_Light.png" />
+    <None Include="Resources\1371236677_male.png" />
+    <None Include="Resources\1371236480_female.png" />
     <Content Include="system-users.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -126,6 +126,21 @@
               les recherches de ressources à l'aide de cette classe de ressource fortement typée.
             </summary>
         </member>
+        <member name="P:gestion_usagers.Properties.Resources._1371235139_Child_Male_Light">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:gestion_usagers.Properties.Resources._1371236480_female">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:gestion_usagers.Properties.Resources._1371236677_male">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
         <member name="P:gestion_usagers.Properties.Resources.edit_find_replace">
             <summary>
               Recherche une ressource localisée de type System.Drawing.Bitmap.

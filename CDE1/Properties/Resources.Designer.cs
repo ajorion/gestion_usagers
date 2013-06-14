@@ -63,6 +63,36 @@ namespace gestion_usagers.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1371235139_Child_Male_Light {
+            get {
+                object obj = ResourceManager.GetObject("_1371235139_Child_Male_Light", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1371236480_female {
+            get {
+                object obj = ResourceManager.GetObject("_1371236480_female", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1371236677_male {
+            get {
+                object obj = ResourceManager.GetObject("_1371236677_male", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap edit_find_replace {
             get {
                 object obj = ResourceManager.GetObject("edit_find_replace", resourceCulture);
