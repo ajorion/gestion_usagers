@@ -32,6 +32,7 @@ namespace gestion_usagers
             ColumnHeader columnheader0 = new ColumnHeader();
             columnheader0.Text = "Mesure";
 
+
             ColumnHeader columnheader1 = new ColumnHeader();
             columnheader1.Text = "Date de début";
             columnheader1.Width = 150;
@@ -45,21 +46,30 @@ namespace gestion_usagers
             ColumnHeader columnheader3 = new ColumnHeader();
             columnheader3.Text = "Juge des enfants";
             columnheader3.TextAlign = HorizontalAlignment.Left;
+            columnheader3.Width = -2;
+
+            ColumnHeader columnheader4 = new ColumnHeader();
+            columnheader4.Text = "Prochaine audience";
+            columnheader4.TextAlign = HorizontalAlignment.Left;
+            columnheader4.Width = -2;
 
             
             listView1.Columns.Add(columnheader0);
             listView1.Columns.Add(columnheader1);
             listView1.Columns.Add(columnheader2);
             listView1.Columns.Add(columnheader3);
+            listView1.Columns.Add(columnheader4);
+            listView1.Sorting = SortOrder.Ascending;
+
             
             try
             {
                 while (enfant.Read())
                 {
-                    this.Text = "Consultation d'un dossier : " + enfant["prenom"].ToString();
+                    this.Text = "Consultation d'un dossier : " + enfant["prenom"].ToString() + " " + enfant["nom"].ToString();
                     lbl_nomprenom.Text = enfant["nom"].ToString().ToUpper() + " " + enfant["prenom"].ToString();
-                    txb_num_dossier.Text = enfant["num_dossier"].ToString();
-                    txb_date_naiss.Text = enfant["date_naissance"].ToString();
+                    toolStripLabel1.Text = "N° dossier : " + enfant["num_dossier"].ToString();
+                    txb_date_naiss.Text = enfant["date_naissance"].ToString() + " à " + enfant["lieu_naissance"].ToString();
                     
                     var status = Db.listeStatuts(enfant["num_dossier"].ToString());
 
@@ -69,6 +79,7 @@ namespace gestion_usagers
                         lvi.SubItems.Add(status["date_debut"].ToString());
                         lvi.SubItems.Add(status["date_fin"].ToString());
                         lvi.SubItems.Add(status["nom_juge"].ToString() + " - " + status["tpe"].ToString());
+                        lvi.SubItems.Add(status["date_audience"].ToString());
                         listView1.Items.Add(lvi);
                         
                     }
@@ -122,5 +133,10 @@ namespace gestion_usagers
         }
 
         public object dossier { get; set; }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

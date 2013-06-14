@@ -53,3 +53,4 @@ C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\bin\Release\Gestion_usag
 C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\bin\Release\Gestion_usagers.pdb
 C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\obj\x86\Release\Gestion_usagers.exe
 C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\obj\x86\Release\Gestion_usagers.pdb
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\obj\x86\Release\gestion_usagers.LoadForm.resources

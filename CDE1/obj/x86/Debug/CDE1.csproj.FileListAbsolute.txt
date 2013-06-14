@@ -14,3 +14,22 @@ C:\Users\ajorion\Documents\Visual Studio 2010\Projects\CDE1\CDE1\obj\x86\Debug\C
 C:\Users\ajorion\Documents\Visual Studio 2010\Projects\CDE1\CDE1\bin\Debug\System.Data.SQLite.dll
 C:\Users\ajorion\Documents\Visual Studio 2010\Projects\CDE1\CDE1\bin\Debug\System.Data.SQLite.pdb
 C:\Users\ajorion\Documents\Visual Studio 2010\Projects\CDE1\CDE1\obj\x86\Debug\CDE.bd_operations.resources
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\bin\Debug\Gestion_usagers.exe.config
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\bin\Debug\Gestion_usagers.xml
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\bin\Debug\Gestion_usagers.exe
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\bin\Debug\Gestion_usagers.pdb
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\bin\Debug\System.Data.SQLite.dll
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\bin\Debug\System.Data.SQLite.xml
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\bin\Debug\System.Data.SQLite.Linq.xml
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\obj\x86\Debug\CDE1.csprojResolveAssemblyReference.cache
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\obj\x86\Debug\gestion_usagers.AboutBox1.resources
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\obj\x86\Debug\gestion_usagers.AdmissionForm.resources
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\obj\x86\Debug\gestion_usagers.ConsultDossier.resources
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\obj\x86\Debug\gestion_usagers.Form1.resources
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\obj\x86\Debug\gestion_usagers.LoadForm.resources
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\obj\x86\Debug\gestion_usagers.LoginForm.resources
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\obj\x86\Debug\gestion_usagers.Properties.Resources.resources
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\obj\x86\Debug\CDE1.csproj.GenerateResource.Cache
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\obj\x86\Debug\Gestion_usagers.exe
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\obj\x86\Debug\Gestion_usagers.pdb

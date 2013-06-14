@@ -21,6 +21,23 @@
             le contenu de cette méthode avec l'éditeur de code.
             </summary>
         </member>
+        <member name="F:gestion_usagers.LoadForm.components">
+            <summary>
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:gestion_usagers.LoadForm.Dispose(System.Boolean)">
+            <summary>
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:gestion_usagers.LoadForm.InitializeComponent">
+            <summary>
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
         <member name="F:gestion_usagers.ConsultDossier.components">
             <summary>
             Variable nécessaire au concepteur.
@@ -104,12 +121,42 @@
               les recherches de ressources à l'aide de cette classe de ressource fortement typée.
             </summary>
         </member>
+        <member name="P:gestion_usagers.Properties.Resources.edit_find_replace">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:gestion_usagers.Properties.Resources.help_browser">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
         <member name="P:gestion_usagers.Properties.Resources.icone_identification">
             <summary>
               Recherche une ressource localisée de type System.Drawing.Bitmap.
             </summary>
         </member>
+        <member name="P:gestion_usagers.Properties.Resources.list_add">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
         <member name="P:gestion_usagers.Properties.Resources.sauver">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:gestion_usagers.Properties.Resources.sortie">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:gestion_usagers.Properties.Resources.system_search">
+            <summary>
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:gestion_usagers.Properties.Resources.system_users">
             <summary>
               Recherche une ressource localisée de type System.Drawing.Bitmap.
             </summary>

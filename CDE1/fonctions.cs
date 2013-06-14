@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.DirectoryServices;
 
 namespace gestion_usagers
 {
     class Fonctions
     {
+        
         /* Fonction IsAuthenticated() utilisée pendant le developpement */
+        
         public static bool IsAuthenticated(string utilisateur, string mdp)
         {
             bool authenticated = false;
@@ -28,6 +31,7 @@ namespace gestion_usagers
 
             return authenticated;
         }
+         
 
 
         public static bool isAdmin(string login)
@@ -46,9 +50,9 @@ namespace gestion_usagers
             return admin;
         }
 
-        /* Partie pour l'authentification à l'AD - non utilisée en période de développement
-         
-       public bool IsAuthenticated(string utilisateur, string mdp)
+        /* Partie pour l'authentification à l'AD - non utilisée en période de développement */
+       /*  
+       public static bool IsAuthenticated(string utilisateur, string mdp)
        {
            bool authenticated = false;
 
@@ -74,7 +78,8 @@ namespace gestion_usagers
            }
            return authenticated;
        }
-       */
+        */
+
     }
 
 

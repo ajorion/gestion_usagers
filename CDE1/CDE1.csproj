@@ -123,6 +123,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadForm.Designer.cs">
+      <DependentUpon>LoadForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadForm.resx">
+      <DependentUpon>LoadForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -210,6 +219,14 @@
   <ItemGroup>
     <Content Include="logo_CDE.ico" />
     <None Include="Resources\logo CDE.JPG" />
+    <None Include="Resources\process-stop.png" />
+    <None Include="Resources\system-search.png" />
+    <None Include="Resources\list-add.png" />
+    <None Include="Resources\contact-new.png" />
+    <None Include="Resources\edit-find-replace.png" />
+    <None Include="Resources\help-browser.png" />
+    <None Include="Resources\bricks.png" />
+    <None Include="Resources\system-users.png" />
     <Content Include="system-users.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -16,6 +16,8 @@ namespace gestion_usagers
     {
         //SQLiteConnection m_dbConnection;
 
+        Timer bg = new Timer();
+
         public Form1()
         {
             InitializeComponent();
@@ -25,6 +27,7 @@ namespace gestion_usagers
         private void Form1_Load(object sender, EventArgs e)
         {
 
+            Console.Write(string.Format("{0:dd/MM/yyyy}", DateTime.Now));
 
             this.listView1.View = System.Windows.Forms.View.Details;
 
@@ -107,15 +110,23 @@ namespace gestion_usagers
             
             StatusBarPanel InfosPanel = new StatusBarPanel();
             StatusBarPanel datePanel = new StatusBarPanel();
+            StatusBarPanel heurePanel = new StatusBarPanel();
+
 
             InfosPanel.Text = "Connecté en tant que " + Environment.UserDomainName + "\\" + Environment.UserName;
             InfosPanel.AutoSize = StatusBarPanelAutoSize.Spring;
             mainStatusBar.Panels.Add(InfosPanel);
-
+            /*
             datePanel.Text = DateTime.Today.ToLongDateString();
             datePanel.ToolTipText = DateTime.Today.ToString();
-            datePanel.AutoSize = StatusBarPanelAutoSize.Contents;
+            datePanel.AutoSize = StatusBarPanelAutoSize.Contents; 
             mainStatusBar.Panels.Add(datePanel);
+            */
+            bg.Tick += (s, ev) => { heurePanel.Text = string.Format("{0:H:m}", DateTime.Now.ToString()); };
+            bg.Interval = 500;
+            bg.Start();
+            heurePanel.AutoSize = StatusBarPanelAutoSize.Contents;
+            mainStatusBar.Panels.Add(heurePanel);
 
             mainStatusBar.ShowPanels = true;
                         
@@ -143,7 +154,7 @@ namespace gestion_usagers
 
         private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
 
         }
 
@@ -186,6 +197,11 @@ namespace gestion_usagers
         private void listView1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
         
     }
