@@ -33,3 +33,5 @@ C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\obj\x86\Debug\gestion_us
 C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\obj\x86\Debug\CDE1.csproj.GenerateResource.Cache
 C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\obj\x86\Debug\Gestion_usagers.exe
 C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\obj\x86\Debug\Gestion_usagers.pdb
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\bin\Debug\ClariusLabs.NuDoc.dll
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\bin\Debug\ClariusLabs.NuDoc.xml

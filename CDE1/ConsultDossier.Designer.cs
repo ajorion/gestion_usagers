@@ -319,22 +319,23 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.33234F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 107F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.66766F));
-            this.tableLayoutPanel5.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.label10, 0, 5);
-            this.tableLayoutPanel5.Controls.Add(this.textBox1, 1, 0);
-            this.tableLayoutPanel5.Controls.Add(this.label7, 0, 2);
-            this.tableLayoutPanel5.Controls.Add(this.textBox2, 1, 2);
-            this.tableLayoutPanel5.Controls.Add(this.label8, 0, 3);
-            this.tableLayoutPanel5.Controls.Add(this.textBox3, 1, 3);
-            this.tableLayoutPanel5.Controls.Add(this.label9, 0, 4);
-            this.tableLayoutPanel5.Controls.Add(this.textBox4, 1, 4);
-            this.tableLayoutPanel5.Controls.Add(this.textBox5, 2, 4);
-            this.tableLayoutPanel5.Controls.Add(this.textBox6, 1, 5);
-            this.tableLayoutPanel5.Controls.Add(this.textBox7, 2, 5);
+            this.tableLayoutPanel5.Controls.Add(this.label1, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.label10, 0, 6);
+            this.tableLayoutPanel5.Controls.Add(this.textBox1, 1, 1);
+            this.tableLayoutPanel5.Controls.Add(this.label7, 0, 3);
+            this.tableLayoutPanel5.Controls.Add(this.textBox2, 1, 3);
+            this.tableLayoutPanel5.Controls.Add(this.label8, 0, 4);
+            this.tableLayoutPanel5.Controls.Add(this.textBox3, 1, 4);
+            this.tableLayoutPanel5.Controls.Add(this.label9, 0, 5);
+            this.tableLayoutPanel5.Controls.Add(this.textBox4, 1, 5);
+            this.tableLayoutPanel5.Controls.Add(this.textBox5, 2, 5);
+            this.tableLayoutPanel5.Controls.Add(this.textBox6, 1, 6);
+            this.tableLayoutPanel5.Controls.Add(this.textBox7, 2, 6);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 6;
+            this.tableLayoutPanel5.RowCount = 7;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -347,7 +348,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Location = new System.Drawing.Point(3, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 26);
             this.label1.TabIndex = 0;
@@ -357,7 +358,7 @@
             // 
             this.tableLayoutPanel5.SetColumnSpan(this.textBox1, 2);
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox1.Location = new System.Drawing.Point(67, 3);
+            this.textBox1.Location = new System.Drawing.Point(67, 33);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(302, 20);
             this.textBox1.TabIndex = 1;
@@ -365,7 +366,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 26);
+            this.label7.Location = new System.Drawing.Point(3, 56);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(55, 39);
             this.label7.TabIndex = 2;
@@ -375,7 +376,7 @@
             // 
             this.tableLayoutPanel5.SetColumnSpan(this.textBox2, 2);
             this.textBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox2.Location = new System.Drawing.Point(67, 29);
+            this.textBox2.Location = new System.Drawing.Point(67, 59);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(302, 20);
             this.textBox2.TabIndex = 3;
@@ -384,7 +385,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label8.Location = new System.Drawing.Point(3, 65);
+            this.label8.Location = new System.Drawing.Point(3, 95);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(45, 66);
             this.label8.TabIndex = 4;
@@ -395,7 +396,7 @@
             // 
             this.tableLayoutPanel5.SetColumnSpan(this.textBox3, 2);
             this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox3.Location = new System.Drawing.Point(67, 68);
+            this.textBox3.Location = new System.Drawing.Point(67, 98);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(302, 60);
@@ -406,7 +407,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label9.Location = new System.Drawing.Point(3, 131);
+            this.label9.Location = new System.Drawing.Point(3, 161);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(49, 26);
             this.label9.TabIndex = 6;
@@ -415,7 +416,7 @@
             // textBox4
             // 
             this.textBox4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.textBox4.Location = new System.Drawing.Point(67, 134);
+            this.textBox4.Location = new System.Drawing.Point(67, 164);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 7;
@@ -423,7 +424,7 @@
             // textBox5
             // 
             this.textBox5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox5.Location = new System.Drawing.Point(174, 134);
+            this.textBox5.Location = new System.Drawing.Point(174, 164);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(195, 20);
             this.textBox5.TabIndex = 8;
@@ -432,7 +433,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label10.Location = new System.Drawing.Point(3, 157);
+            this.label10.Location = new System.Drawing.Point(3, 187);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(58, 13);
             this.label10.TabIndex = 9;
@@ -441,14 +442,14 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(67, 160);
+            this.textBox6.Location = new System.Drawing.Point(67, 190);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(100, 20);
             this.textBox6.TabIndex = 10;
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(174, 160);
+            this.textBox7.Location = new System.Drawing.Point(174, 190);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(100, 20);
             this.textBox7.TabIndex = 11;
@@ -461,6 +462,7 @@
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton1.Text = "Fermer le dossier";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
             // 
             // pictureBox1
             // 
@@ -501,22 +503,23 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.33234F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 107F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.66766F));
-            this.tableLayoutPanel6.Controls.Add(this.label11, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.label12, 0, 5);
-            this.tableLayoutPanel6.Controls.Add(this.textBox8, 1, 0);
-            this.tableLayoutPanel6.Controls.Add(this.label13, 0, 2);
-            this.tableLayoutPanel6.Controls.Add(this.textBox9, 1, 2);
-            this.tableLayoutPanel6.Controls.Add(this.label14, 0, 3);
-            this.tableLayoutPanel6.Controls.Add(this.textBox10, 1, 3);
-            this.tableLayoutPanel6.Controls.Add(this.label15, 0, 4);
-            this.tableLayoutPanel6.Controls.Add(this.textBox11, 1, 4);
-            this.tableLayoutPanel6.Controls.Add(this.textBox12, 2, 4);
-            this.tableLayoutPanel6.Controls.Add(this.textBox13, 1, 5);
-            this.tableLayoutPanel6.Controls.Add(this.textBox14, 2, 5);
+            this.tableLayoutPanel6.Controls.Add(this.label11, 0, 1);
+            this.tableLayoutPanel6.Controls.Add(this.label12, 0, 6);
+            this.tableLayoutPanel6.Controls.Add(this.textBox8, 1, 1);
+            this.tableLayoutPanel6.Controls.Add(this.label13, 0, 3);
+            this.tableLayoutPanel6.Controls.Add(this.textBox9, 1, 3);
+            this.tableLayoutPanel6.Controls.Add(this.label14, 0, 4);
+            this.tableLayoutPanel6.Controls.Add(this.textBox10, 1, 4);
+            this.tableLayoutPanel6.Controls.Add(this.label15, 0, 5);
+            this.tableLayoutPanel6.Controls.Add(this.textBox11, 1, 5);
+            this.tableLayoutPanel6.Controls.Add(this.textBox12, 2, 5);
+            this.tableLayoutPanel6.Controls.Add(this.textBox13, 1, 6);
+            this.tableLayoutPanel6.Controls.Add(this.textBox14, 2, 6);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 6;
+            this.tableLayoutPanel6.RowCount = 7;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -529,7 +532,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(3, 0);
+            this.label11.Location = new System.Drawing.Point(3, 30);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(43, 26);
             this.label11.TabIndex = 0;
@@ -539,7 +542,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label12.Location = new System.Drawing.Point(3, 157);
+            this.label12.Location = new System.Drawing.Point(3, 187);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(58, 13);
             this.label12.TabIndex = 9;
@@ -550,7 +553,7 @@
             // 
             this.tableLayoutPanel6.SetColumnSpan(this.textBox8, 2);
             this.textBox8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox8.Location = new System.Drawing.Point(67, 3);
+            this.textBox8.Location = new System.Drawing.Point(67, 33);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(302, 20);
             this.textBox8.TabIndex = 1;
@@ -558,7 +561,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(3, 26);
+            this.label13.Location = new System.Drawing.Point(3, 56);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(55, 39);
             this.label13.TabIndex = 2;
@@ -568,7 +571,7 @@
             // 
             this.tableLayoutPanel6.SetColumnSpan(this.textBox9, 2);
             this.textBox9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox9.Location = new System.Drawing.Point(67, 29);
+            this.textBox9.Location = new System.Drawing.Point(67, 59);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(302, 20);
             this.textBox9.TabIndex = 3;
@@ -577,7 +580,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label14.Location = new System.Drawing.Point(3, 65);
+            this.label14.Location = new System.Drawing.Point(3, 95);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(45, 66);
             this.label14.TabIndex = 4;
@@ -588,7 +591,7 @@
             // 
             this.tableLayoutPanel6.SetColumnSpan(this.textBox10, 2);
             this.textBox10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox10.Location = new System.Drawing.Point(67, 68);
+            this.textBox10.Location = new System.Drawing.Point(67, 98);
             this.textBox10.Multiline = true;
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(302, 60);
@@ -598,7 +601,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label15.Location = new System.Drawing.Point(3, 131);
+            this.label15.Location = new System.Drawing.Point(3, 161);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(49, 26);
             this.label15.TabIndex = 6;
@@ -607,7 +610,7 @@
             // textBox11
             // 
             this.textBox11.Dock = System.Windows.Forms.DockStyle.Left;
-            this.textBox11.Location = new System.Drawing.Point(67, 134);
+            this.textBox11.Location = new System.Drawing.Point(67, 164);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(100, 20);
             this.textBox11.TabIndex = 7;
@@ -615,21 +618,21 @@
             // textBox12
             // 
             this.textBox12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox12.Location = new System.Drawing.Point(174, 134);
+            this.textBox12.Location = new System.Drawing.Point(174, 164);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(195, 20);
             this.textBox12.TabIndex = 8;
             // 
             // textBox13
             // 
-            this.textBox13.Location = new System.Drawing.Point(67, 160);
+            this.textBox13.Location = new System.Drawing.Point(67, 190);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(100, 20);
             this.textBox13.TabIndex = 10;
             // 
             // textBox14
             // 
-            this.textBox14.Location = new System.Drawing.Point(174, 160);
+            this.textBox14.Location = new System.Drawing.Point(174, 190);
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(100, 20);
             this.textBox14.TabIndex = 11;

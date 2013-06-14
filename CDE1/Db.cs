@@ -6,9 +6,15 @@ using System.Data.SQLite;
 
 namespace gestion_usagers
 {
+    /// <summary>
+    ///  Classe gérant les appels à la base de données.
+    ///  <para>Cette classe gère les différents appels à la base de données :
+    /// Insertion, Mise à jour, Suppression, Récupération d'informations diverses.
+    /// </para>
+    /// </summary>
     class Db
     {
-        
+
         static string db = "Data Source=./cde.db;Version=3;";
         static SQLiteConnection m_dbConnection;
 
@@ -21,9 +27,9 @@ namespace gestion_usagers
             SQLiteCommand command = new SQLiteCommand(query, m_dbConnection);
             SQLiteDataReader reader = command.ExecuteReader();
 
-            return reader;      
+            return reader;
         }
-                
+
         public static SQLiteDataReader getDossierEnfant(string num_dossier)
         {
             m_dbConnection = new SQLiteConnection(db);

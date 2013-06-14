@@ -37,6 +37,19 @@
             the contents of this method with the code editor.
             </summary>
         </member>
+        <member name="T:gestion_usagers.ConsultDossier">
+            <summary>
+             Classe gérant l'affichage des informations du dossier de l'usager
+            </summary>
+        </member>
+        <member name="M:gestion_usagers.ConsultDossier.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="dossier">Permet de récupérer l'ID du dossier de l'usager concerné
+            afin de récupérer les informations de la base de données.
+            </param>
+        </member>
         <member name="F:gestion_usagers.ConsultDossier.components">
             <summary>
             Variable nécessaire au concepteur.
@@ -88,6 +101,11 @@
             le contenu de cette méthode avec l'éditeur de code.
             </summary>
         </member>
+        <member name="T:gestion_usagers.LoginForm">
+            <summary>
+            Affichage et traitement des informations d'identification
+            </summary>
+        </member>
         <member name="F:gestion_usagers.LoginForm.components">
             <summary>
             Variable nécessaire au concepteur.
@@ -103,6 +121,14 @@
             <summary>
             Méthode requise pour la prise en charge du concepteur - ne modifiez pas
             le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="T:gestion_usagers.Db">
+            <summary>
+             Classe gérant les appels à la base de données.
+             <para>Cette classe gère les différents appels à la base de données :
+            Insertion, Mise à jour, Suppression, Récupération d'informations diverses.
+            </para>
             </summary>
         </member>
         <member name="M:gestion_usagers.Program.Main">

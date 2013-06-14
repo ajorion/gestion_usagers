@@ -1,20 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using System.Data.SQLite;
 
 namespace gestion_usagers
 {
+    /// <summary>
+    ///  Classe gérant l'affichage des informations du dossier de l'usager
+    /// </summary>
     public partial class ConsultDossier : Form
     {
         public string num_dossier;
+                
         //SQLiteConnection m_dbConnection; 
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="dossier">Permet de récupérer l'ID du dossier de l'usager concerné
+        /// afin de récupérer les informations de la base de données.
+        /// </param>
         public ConsultDossier(string dossier)
         {
             InitializeComponent();
@@ -150,6 +153,11 @@ namespace gestion_usagers
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void toolStripButton1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

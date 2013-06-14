@@ -11,8 +11,12 @@ using System.Diagnostics;
 
 namespace gestion_usagers
 {
+    /// <summary>
+    /// Affichage et traitement des informations d'identification
+    /// </summary>
     public partial class LoginForm : Form
     {
+
         public LoginForm()
         {
             InitializeComponent();
