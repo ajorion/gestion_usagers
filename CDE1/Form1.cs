@@ -27,7 +27,7 @@ namespace gestion_usagers
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            Console.Write(string.Format("{0:dd/MM/yyyy}", DateTime.Now));
+            //Console.Write(string.Format("{0:dd/MM/yyyy}", DateTime.Now));
 
             this.listView1.View = System.Windows.Forms.View.Details;
 

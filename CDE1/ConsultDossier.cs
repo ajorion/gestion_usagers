@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using NLog;
 
 namespace gestion_usagers
 {
@@ -9,6 +10,7 @@ namespace gestion_usagers
     public partial class ConsultDossier : Form
     {
         public string num_dossier;
+        private static Logger logger = LogManager.GetCurrentClassLogger();
                 
         //SQLiteConnection m_dbConnection; 
 
@@ -75,6 +77,12 @@ namespace gestion_usagers
                     lbl_date_naiss.Text = enfant["date_naissance"].ToString() + " à " + enfant["lieu_naissance"].ToString();
                     label5.Text = enfant["date_admission"].ToString();
                     label6.Text = enfant["service"].ToString();
+                     
+                    txb_nom_pere.Text = enfant["nom_pere"].ToString();
+                    txb_adrr_pere.Text = enfant["adresse_pere"].ToString();
+                    txb_cp_pere.Text = enfant["cp_pere"].ToString();
+                    txb_ville_pere.Text = enfant["ville_pere"].ToString();
+
                    
                     if (enfant["sexe"].ToString() == "m")
                     {
@@ -102,7 +110,7 @@ namespace gestion_usagers
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                logger.Error(ex.Message);
             }
         
         }
@@ -158,6 +166,21 @@ namespace gestion_usagers
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void tableLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel5_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

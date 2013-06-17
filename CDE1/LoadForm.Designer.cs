@@ -57,6 +57,7 @@
             this.Controls.Add(this.progressBar1);
             this.Name = "LoadForm";
             this.Text = "LoadForm";
+            this.Load += new System.EventHandler(this.LoadForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

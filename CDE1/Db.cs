@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data.SQLite;
 
+
 namespace gestion_usagers
 {
     /// <summary>
@@ -35,7 +36,8 @@ namespace gestion_usagers
             m_dbConnection = new SQLiteConnection(db);
             m_dbConnection.Open();
 
-            string query = string.Format(@"SELECT nom, prenom, date_admission, date_naissance, lieu_naissance, service, num_dossier, sexe
+            string query = string.Format(@"SELECT nom, prenom, date_admission, date_naissance, lieu_naissance, service, num_dossier, sexe,
+                                            nom_pere, adresse_pere, cp_pere, ville_pere
                                         FROM enfants
                                         WHERE num_dossier='{0}'",
                                         num_dossier);
@@ -60,12 +62,12 @@ namespace gestion_usagers
                             AND statuts.id_statut=type_statuts.id_statut
                             AND statuts.id_juge=juges.id_juge", id_enfant);
 
-            SQLiteCommand command = new SQLiteCommand(query, m_dbConnection);
 
-            SQLiteDataReader reader = command.ExecuteReader();
+                SQLiteCommand command = new SQLiteCommand(query, m_dbConnection);
 
-            return reader;
-        }
+                SQLiteDataReader reader = command.ExecuteReader();
+                return reader;
+        }   
 
         /*
         public static SQLiteDataReader echeancesStatut()

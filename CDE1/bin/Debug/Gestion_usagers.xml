@@ -131,10 +131,11 @@
             </para>
             </summary>
         </member>
-        <member name="M:gestion_usagers.Program.Main">
+        <member name="F:gestion_usagers.Program.logger">
             <summary>
             Point d'entrée principal de l'application.
             </summary>
+            
         </member>
         <member name="T:gestion_usagers.Properties.Resources">
             <summary>

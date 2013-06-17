@@ -15,5 +15,10 @@ namespace gestion_usagers
         {
             InitializeComponent();
         }
+
+        private void LoadForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

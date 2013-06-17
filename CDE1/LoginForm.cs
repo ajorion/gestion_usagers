@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.DirectoryServices;
-using System.Diagnostics;
+using NLog;
 
 namespace gestion_usagers
 {
@@ -16,6 +16,7 @@ namespace gestion_usagers
     /// </summary>
     public partial class LoginForm : Form
     {
+        private static Logger logger = LogManager.GetCurrentClassLogger();
 
         public LoginForm()
         {
@@ -40,7 +41,7 @@ namespace gestion_usagers
                     this.Hide();
                     Form1 form1 = new Form1();
                     form1.Show();
-                    Debug.Write(DateTime.Now + " : identification en tant que " + Txt_Login.Text);
+                    logger.Info("identification en tant que " + Txt_Login.Text);
                     
                 }
             }
@@ -64,6 +65,11 @@ namespace gestion_usagers
                     Btn_Login.PerformClick();
                     break;
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
 
 
