@@ -5,6 +5,7 @@ using System.Text;
 using System.Data.SQLite;
 
 
+
 namespace gestion_usagers
 {
     /// <summary>
@@ -37,7 +38,8 @@ namespace gestion_usagers
             m_dbConnection.Open();
 
             string query = string.Format(@"SELECT nom, prenom, date_admission, date_naissance, lieu_naissance, service, num_dossier, sexe,
-                                            nom_pere, adresse_pere, cp_pere, ville_pere
+                                            nom_pere, dn_pere, adresse_pere, cp_pere, ville_pere, ap_pere,
+                                            nom_mere, dn_mere, adresse_mere, cp_mere, ville_mere, ap_mere
                                         FROM enfants
                                         WHERE num_dossier='{0}'",
                                         num_dossier);

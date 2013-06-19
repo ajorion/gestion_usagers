@@ -79,9 +79,16 @@ namespace gestion_usagers
                     label6.Text = enfant["service"].ToString();
                      
                     txb_nom_pere.Text = enfant["nom_pere"].ToString();
+                    txb_nais_pere.Text = enfant["dn_pere"].ToString();
                     txb_adrr_pere.Text = enfant["adresse_pere"].ToString();
                     txb_cp_pere.Text = enfant["cp_pere"].ToString();
                     txb_ville_pere.Text = enfant["ville_pere"].ToString();
+
+                    txb_nom_mere.Text = enfant["nom_mere"].ToString();
+                    txb_nais_mere.Text = enfant["dn_mere"].ToString();
+                    txb_addr_mere.Text = enfant["adresse_mere"].ToString();
+                    txb_cp_mere.Text = enfant["cp_mere"].ToString();
+                    txb_ville_mere.Text = enfant["ville_mere"].ToString();
 
                    
                     if (enfant["sexe"].ToString() == "m")
@@ -93,6 +100,17 @@ namespace gestion_usagers
                     {
                         sexe_img.Image = Properties.Resources._1371236480_female;
                         sexe_img.SizeMode = PictureBoxSizeMode.CenterImage;
+                    }
+
+                    // TODO: voir pour changer de méthode car là, c'est un peu sale...
+                    if (enfant["ap_pere"].ToString() == "1")
+                    {
+                        chkb_ap_pere.Checked = true;
+                    }
+
+                    if (enfant["ap_mere"].ToString() == "1")
+                    {
+                        chkb_ap_mere.Checked = true;
                     }
 
                     var status = Db.listeStatuts(enfant["num_dossier"].ToString());
@@ -189,6 +207,16 @@ namespace gestion_usagers
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_date_naiss_Click(object sender, EventArgs e)
         {
 
         }
