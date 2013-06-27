@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="cdeModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="cdeEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="enfants" EntityType="cdeModel.enfants" />
+  </EntityContainer>
+  <EntityType Name="enfants">
+    <Key>
+      <PropertyRef Name="num_dossier" />
+    </Key>
+    <Property Type="String" Name="num_dossier" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="nom_enfant" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="prenom_enfant" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="date_naissance" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="lieu_naissance" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="date_admission" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="service" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="modalites" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="demande_de" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+</Schema>

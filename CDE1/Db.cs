@@ -20,6 +20,22 @@ namespace gestion_usagers
         static string db = "Data Source=./cde.db;Version=3;";
         static SQLiteConnection m_dbConnection;
 
+        /// <summary>
+        /// Fonction récupérant l'ensemble des des usagers
+        /// </summary>
+        /// <returns>SQLiteDataReader reader</returns>
+        public static SQLiteDataReader getUsagers()
+        {
+            m_dbConnection = new SQLiteConnection(db);
+            m_dbConnection.Open();
+
+            string query = "SELECT * from enfants";
+            SQLiteCommand command = new SQLiteCommand(query, m_dbConnection);
+            SQLiteDataReader reader = command.ExecuteReader();
+
+            return reader;
+        }
+                
         public static SQLiteDataReader getDernieresEntrees()
         {
             m_dbConnection = new SQLiteConnection(db);

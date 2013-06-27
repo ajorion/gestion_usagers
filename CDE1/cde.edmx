@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="cdeModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="cdeModelStoreContainer">
+          <EntitySet Name="enfants" EntityType="cdeModel.Store.enfants" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="enfants">
+          <Key>
+            <PropertyRef Name="num_dossier" />
+          </Key>
+          <Property Name="num_dossier" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="nom_enfant" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="prenom_enfant" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="date_naissance" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="lieu_naissance" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="date_admission" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="service" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="modalites" Type="nchar" MaxLength="10" />
+          <Property Name="demande_de" Type="nchar" MaxLength="10" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="cdeModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="cdeEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="enfants" EntityType="cdeModel.enfants" />
+        </EntityContainer>
+        <EntityType Name="enfants">
+          <Key>
+            <PropertyRef Name="num_dossier" />
+          </Key>
+          <Property Type="String" Name="num_dossier" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="nom_enfant" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="prenom_enfant" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="date_naissance" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="lieu_naissance" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="date_admission" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="service" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="modalites" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="demande_de" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="cdeModelStoreContainer" CdmEntityContainer="cdeEntities">
+          <EntitySetMapping Name="enfants">
+            <EntityTypeMapping TypeName="cdeModel.enfants">
+              <MappingFragment StoreEntitySet="enfants">
+                <ScalarProperty Name="demande_de" ColumnName="demande_de" />
+                <ScalarProperty Name="modalites" ColumnName="modalites" />
+                <ScalarProperty Name="service" ColumnName="service" />
+                <ScalarProperty Name="date_admission" ColumnName="date_admission" />
+                <ScalarProperty Name="lieu_naissance" ColumnName="lieu_naissance" />
+                <ScalarProperty Name="date_naissance" ColumnName="date_naissance" />
+                <ScalarProperty Name="prenom_enfant" ColumnName="prenom_enfant" />
+                <ScalarProperty Name="nom_enfant" ColumnName="nom_enfant" />
+                <ScalarProperty Name="num_dossier" ColumnName="num_dossier" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Aucun" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

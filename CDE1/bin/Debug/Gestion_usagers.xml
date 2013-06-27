@@ -131,6 +131,12 @@
             </para>
             </summary>
         </member>
+        <member name="M:gestion_usagers.Db.getUsagers">
+            <summary>
+            Fonction récupérant l'ensemble des des usagers
+            </summary>
+            <returns>SQLiteDataReader reader</returns>
+        </member>
         <member name="F:gestion_usagers.Program.logger">
             <summary>
             Point d'entrée principal de l'application.

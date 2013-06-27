@@ -1,5 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
 using System.Windows.Forms;
+using System.Data.Objects;
+using System.Data.Objects.DataClasses;
 using NLog;
 
 namespace gestion_usagers
@@ -11,7 +19,8 @@ namespace gestion_usagers
     {
         public string num_dossier;
         private static Logger logger = LogManager.GetCurrentClassLogger();
-                
+        private cdeEntities enfantsContext;
+
         //SQLiteConnection m_dbConnection; 
 
         /// <summary>
@@ -32,6 +41,13 @@ namespace gestion_usagers
         {
             var enfant = Db.getDossierEnfant(num_dossier);
 
+            enfantsContext = new cdeEntities();
+
+            
+            var query = from enfants in enfantsContext.enfants
+                        where enfants.num_dossier == num_dossier
+                        select enfants;
+            
             this.listView1.View = System.Windows.Forms.View.Details;
 
             ColumnHeader columnheader0 = new ColumnHeader();
@@ -66,7 +82,18 @@ namespace gestion_usagers
             listView1.Columns.Add(columnheader4);
             listView1.Sorting = SortOrder.Ascending;
 
-            
+            foreach (var value in query)
+            {
+                this.Text = "Consultation d'un dossier : " + value.prenom_enfant + value.nom_enfant.ToUpper();
+
+                lbl_nomprenom.Text = value.nom_enfant + value.prenom_enfant;
+                toolStripLabel1.Text = value.num_dossier;
+                lbl_date_naiss.Text = value.date_naissance + value.lieu_naissance;
+                label5.Text = value.date_admission;
+                label6.Text = value.service;
+
+            }
+            /*
             try
             {
                 while (enfant.Read())
@@ -130,7 +157,7 @@ namespace gestion_usagers
             {
                 logger.Error(ex.Message);
             }
-        
+        */
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -217,6 +244,11 @@ namespace gestion_usagers
         }
 
         private void lbl_date_naiss_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lst_ets_scol_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

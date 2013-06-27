@@ -40,3 +40,6 @@ C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\bin\Debug\nunit.framewor
 C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\bin\Debug\nunit.mocks.dll
 C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\bin\Debug\pnunit.framework.dll
 C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\bin\Debug\nunit.framework.xml
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\bin\Debug\EntityFramework.dll
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\bin\Debug\EntityFramework.xml
+C:\Users\ajorion\Documents\GitHub\gestion_usagers2\CDE1\bin\Debug\fr\EntityFramework.resources.dll

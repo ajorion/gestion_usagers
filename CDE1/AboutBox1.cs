@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace gestion_usagers
 {
@@ -18,7 +19,7 @@ namespace gestion_usagers
             this.labelVersion.Text = String.Format("Version {0}", AssemblyVersion);
             this.labelCopyright.Text = AssemblyCopyright;
             this.labelCompanyName.Text = AssemblyCompany;
-            this.textBoxDescription.Text = AssemblyDescription;
+            this.textBoxDescription.Text = String.Format("{0} {1} Site Internet : {2}", AssemblyDescription, Environment.NewLine, ConfigurationManager.AppSettings["url"]);
 
         }
 
@@ -108,6 +109,11 @@ namespace gestion_usagers
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }

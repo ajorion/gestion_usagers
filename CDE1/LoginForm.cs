@@ -33,25 +33,29 @@ namespace gestion_usagers
 
         private void Btn_Login_Click(object sender, EventArgs e)
         {
-            if ((Txt_Pwd.Text != "") && (Txt_Pwd.Text != ""))
-            {
 
-                if (Fonctions.IsAuthenticated(Txt_Login.Text, Txt_Pwd.Text))
+
+                if ((Txt_Pwd.Text != "") && (Txt_Pwd.Text != ""))
                 {
-                    this.Hide();
-                    Form1 form1 = new Form1();
-                    form1.Show();
-                    logger.Info("identification en tant que " + Txt_Login.Text);
-                    
+
+                    if (Fonctions.IsAuthenticated(Txt_Login.Text, Txt_Pwd.Text))
+                    {
+                        this.Hide();
+                        Form1 form1 = new Form1();
+                        form1.Show();
+                        logger.Info("identification en tant que " + Txt_Login.Text);
+
+                    }
                 }
-            }
-            else
-            {
-                MessageBox.Show("Veuillez renseigner un nom d'utilisateur et/ou un mot de passe !",
-                    "Erreur de saisie !",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Exclamation);
-            }
+                else
+                {
+                    MessageBox.Show("Veuillez renseigner un nom d'utilisateur et/ou un mot de passe !",
+                        "Erreur de saisie !",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Exclamation);
+
+                }
+
             Txt_Login.Clear();
             Txt_Pwd.Clear();
 

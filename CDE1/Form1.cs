@@ -6,9 +6,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using System.Data.SQLite;
-
-
+using System.Data.Objects;
+using System.Data.Objects.DataClasses;
+using NLog;
 
 namespace gestion_usagers
 {
@@ -17,6 +17,9 @@ namespace gestion_usagers
         //SQLiteConnection m_dbConnection;
 
         Timer bg = new Timer();
+        private cdeEntities enfantsContext;
+        private static Logger logger = LogManager.GetCurrentClassLogger();
+
 
         public Form1()
         {
@@ -27,7 +30,12 @@ namespace gestion_usagers
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            //Console.Write(string.Format("{0:dd/MM/yyyy}", DateTime.Now));
+            enfantsContext = new cdeEntities();
+
+            var query = from enfants in enfantsContext.enfants
+                        select enfants;            
+
+
 
             this.listView1.View = System.Windows.Forms.View.Details;
 
@@ -54,58 +62,18 @@ namespace gestion_usagers
             listView1.Columns.Add(columnheader2);
             listView1.Columns.Add(columnheader3);
             
-            /*
-            if (System.IO.File.Exists("cde.db"))
-            {
-                m_dbConnection = new SQLiteConnection("Data Source=./cde.db;Version=3;");
+            var enfantsliste = enfantsContext.enfants.ToList();
 
-                m_dbConnection.Open();
-
-                string query = "SELECT * FROM enfants ORDER BY date_admission DESC LIMIT 5";
-                SQLiteCommand command = new SQLiteCommand(query, m_dbConnection);
-                SQLiteDataReader reader = command.ExecuteReader();
-
-                while (reader.Read())
+            foreach (var enfant in enfantsliste)
                 {
+                    ListViewItem lvi = new ListViewItem(enfant.num_dossier);
+                    lvi.SubItems.Add(enfant.nom_enfant.ToUpper() + enfant.prenom_enfant);
+                    lvi.SubItems.Add(enfant.date_admission);
+                    lvi.SubItems.Add(enfant.service);
 
-                    string nom = reader["nom"].ToString().ToUpper() + " " + reader["prenom"].ToString();
-                    string date_adm = reader["date_admission"].ToString();
-                    string sce = reader["service"].ToString();
-
-                    ListViewItem lvi = new ListViewItem(reader["num_dossier"].ToString());
-
-                    lvi.SubItems.Add(nom);
-                    lvi.SubItems.Add(date_adm);
-                    lvi.SubItems.Add(sce);
                     listView1.Items.Add(lvi);
-
                 }
-
-            }
-            else
-            {
-                ListViewItem lvi = new ListViewItem();
-                lvi.SubItems.Add("Aucun enregistrement");
-                listView1.Items.Add(lvi);
-            }
-            */
-            var entrees = Db.getDernieresEntrees();
-
-            while (entrees.Read())
-            {
-
-                string nom = entrees["nom"].ToString().ToUpper() + " " + entrees["prenom"].ToString();
-                string date_adm = entrees["date_admission"].ToString();
-                string sce = entrees["service"].ToString();
-
-                ListViewItem lvi = new ListViewItem(entrees["num_dossier"].ToString());
-
-                lvi.SubItems.Add(nom);
-                lvi.SubItems.Add(date_adm);
-                lvi.SubItems.Add(sce);
-                listView1.Items.Add(lvi);
-            }
-
+                    
             StatusBar mainStatusBar = new StatusBar();
             
             StatusBarPanel InfosPanel = new StatusBarPanel();
@@ -116,12 +84,7 @@ namespace gestion_usagers
             InfosPanel.Text = "Connecté en tant que " + Environment.UserDomainName + "\\" + Environment.UserName;
             InfosPanel.AutoSize = StatusBarPanelAutoSize.Spring;
             mainStatusBar.Panels.Add(InfosPanel);
-            /*
-            datePanel.Text = DateTime.Today.ToLongDateString();
-            datePanel.ToolTipText = DateTime.Today.ToString();
-            datePanel.AutoSize = StatusBarPanelAutoSize.Contents; 
-            mainStatusBar.Panels.Add(datePanel);
-            */
+
             bg.Tick += (s, ev) => { heurePanel.Text = string.Format("{0:H:m}", DateTime.Now.ToString()); };
             bg.Interval = 500;
             bg.Start();
@@ -131,10 +94,8 @@ namespace gestion_usagers
             mainStatusBar.ShowPanels = true;
                         
             Controls.Add(mainStatusBar);
-
-
+            
         }
-
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -177,7 +138,6 @@ namespace gestion_usagers
         {
             if (listView1.SelectedItems != null)
             {
-                //MessageBox.Show(listView1.SelectedItems[0].Text);
                 ConsultDossier c_d = new ConsultDossier(listView1.SelectedItems[0].Text);
                 c_d.ShowDialog();
             }
@@ -202,6 +162,11 @@ namespace gestion_usagers
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
         
     }

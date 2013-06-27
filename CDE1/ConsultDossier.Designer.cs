@@ -96,6 +96,7 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.lst_ets_scol = new System.Windows.Forms.ListView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -115,6 +116,7 @@
             this.groupBox3.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -419,6 +421,7 @@
             this.txb_nom_mere.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txb_nom_mere.Location = new System.Drawing.Point(3, 14);
             this.txb_nom_mere.Name = "txb_nom_mere";
+            this.txb_nom_mere.ReadOnly = true;
             this.txb_nom_mere.Size = new System.Drawing.Size(366, 20);
             this.txb_nom_mere.TabIndex = 1;
             // 
@@ -439,6 +442,7 @@
             this.txb_nais_mere.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txb_nais_mere.Location = new System.Drawing.Point(3, 55);
             this.txb_nais_mere.Name = "txb_nais_mere";
+            this.txb_nais_mere.ReadOnly = true;
             this.txb_nais_mere.Size = new System.Drawing.Size(366, 20);
             this.txb_nais_mere.TabIndex = 3;
             // 
@@ -460,6 +464,7 @@
             this.txb_addr_mere.Location = new System.Drawing.Point(3, 99);
             this.txb_addr_mere.Multiline = true;
             this.txb_addr_mere.Name = "txb_addr_mere";
+            this.txb_addr_mere.ReadOnly = true;
             this.txb_addr_mere.Size = new System.Drawing.Size(366, 60);
             this.txb_addr_mere.TabIndex = 5;
             // 
@@ -487,6 +492,7 @@
             // 
             this.txb_cp_mere.Location = new System.Drawing.Point(3, 181);
             this.txb_cp_mere.Name = "txb_cp_mere";
+            this.txb_cp_mere.ReadOnly = true;
             this.txb_cp_mere.Size = new System.Drawing.Size(75, 20);
             this.txb_cp_mere.TabIndex = 8;
             // 
@@ -495,6 +501,7 @@
             this.txb_ville_mere.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txb_ville_mere.Location = new System.Drawing.Point(101, 181);
             this.txb_ville_mere.Name = "txb_ville_mere";
+            this.txb_ville_mere.ReadOnly = true;
             this.txb_ville_mere.Size = new System.Drawing.Size(268, 20);
             this.txb_ville_mere.TabIndex = 9;
             // 
@@ -554,6 +561,7 @@
             // 
             this.textBox10.Location = new System.Drawing.Point(70, 3);
             this.textBox10.Name = "textBox10";
+            this.textBox10.ReadOnly = true;
             this.textBox10.Size = new System.Drawing.Size(174, 20);
             this.textBox10.TabIndex = 2;
             // 
@@ -561,6 +569,7 @@
             // 
             this.textBox11.Location = new System.Drawing.Point(70, 31);
             this.textBox11.Name = "textBox11";
+            this.textBox11.ReadOnly = true;
             this.textBox11.Size = new System.Drawing.Size(174, 20);
             this.textBox11.TabIndex = 3;
             // 
@@ -591,6 +600,7 @@
             this.textBox12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox12.Location = new System.Drawing.Point(101, 289);
             this.textBox12.Name = "textBox12";
+            this.textBox12.ReadOnly = true;
             this.textBox12.Size = new System.Drawing.Size(268, 20);
             this.textBox12.TabIndex = 13;
             // 
@@ -599,6 +609,7 @@
             this.textBox13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox13.Location = new System.Drawing.Point(101, 310);
             this.textBox13.Name = "textBox13";
+            this.textBox13.ReadOnly = true;
             this.textBox13.Size = new System.Drawing.Size(268, 20);
             this.textBox13.TabIndex = 14;
             // 
@@ -606,6 +617,7 @@
             // 
             this.chkb_ap_mere.AutoSize = true;
             this.table_infos_mere.SetColumnSpan(this.chkb_ap_mere, 2);
+            this.chkb_ap_mere.Enabled = false;
             this.chkb_ap_mere.Location = new System.Drawing.Point(3, 349);
             this.chkb_ap_mere.Name = "chkb_ap_mere";
             this.chkb_ap_mere.Size = new System.Drawing.Size(109, 17);
@@ -658,12 +670,12 @@
             this.table_infos_pere.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
             this.table_infos_pere.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
             this.table_infos_pere.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.table_infos_pere.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 76F));
-            this.table_infos_pere.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
-            this.table_infos_pere.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.table_infos_pere.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 12F));
+            this.table_infos_pere.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 87F));
+            this.table_infos_pere.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.table_infos_pere.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.table_infos_pere.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.table_infos_pere.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
+            this.table_infos_pere.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.table_infos_pere.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
             this.table_infos_pere.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.table_infos_pere.Size = new System.Drawing.Size(372, 425);
             this.table_infos_pere.TabIndex = 0;
@@ -685,6 +697,7 @@
             this.txb_nom_pere.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txb_nom_pere.Location = new System.Drawing.Point(3, 14);
             this.txb_nom_pere.Name = "txb_nom_pere";
+            this.txb_nom_pere.ReadOnly = true;
             this.txb_nom_pere.Size = new System.Drawing.Size(366, 20);
             this.txb_nom_pere.TabIndex = 1;
             // 
@@ -705,6 +718,7 @@
             this.txb_nais_pere.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txb_nais_pere.Location = new System.Drawing.Point(3, 55);
             this.txb_nais_pere.Name = "txb_nais_pere";
+            this.txb_nais_pere.ReadOnly = true;
             this.txb_nais_pere.Size = new System.Drawing.Size(366, 20);
             this.txb_nais_pere.TabIndex = 3;
             // 
@@ -726,6 +740,7 @@
             this.txb_adrr_pere.Location = new System.Drawing.Point(3, 99);
             this.txb_adrr_pere.Multiline = true;
             this.txb_adrr_pere.Name = "txb_adrr_pere";
+            this.txb_adrr_pere.ReadOnly = true;
             this.txb_adrr_pere.Size = new System.Drawing.Size(366, 60);
             this.txb_adrr_pere.TabIndex = 5;
             // 
@@ -753,6 +768,7 @@
             // 
             this.txb_cp_pere.Location = new System.Drawing.Point(3, 181);
             this.txb_cp_pere.Name = "txb_cp_pere";
+            this.txb_cp_pere.ReadOnly = true;
             this.txb_cp_pere.Size = new System.Drawing.Size(75, 20);
             this.txb_cp_pere.TabIndex = 8;
             // 
@@ -761,6 +777,7 @@
             this.txb_ville_pere.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txb_ville_pere.Location = new System.Drawing.Point(101, 181);
             this.txb_ville_pere.Name = "txb_ville_pere";
+            this.txb_ville_pere.ReadOnly = true;
             this.txb_ville_pere.Size = new System.Drawing.Size(268, 20);
             this.txb_ville_pere.TabIndex = 9;
             // 
@@ -771,7 +788,7 @@
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(3, 213);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(366, 70);
+            this.groupBox3.Size = new System.Drawing.Size(366, 81);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Téléphones";
@@ -791,7 +808,7 @@
             this.tableLayoutPanel6.RowCount = 2;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(360, 51);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(360, 62);
             this.tableLayoutPanel6.TabIndex = 0;
             // 
             // label11
@@ -811,7 +828,7 @@
             this.label12.Dock = System.Windows.Forms.DockStyle.Left;
             this.label12.Location = new System.Drawing.Point(3, 28);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(46, 23);
+            this.label12.Size = new System.Drawing.Size(46, 34);
             this.label12.TabIndex = 1;
             this.label12.Text = "Portable";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -820,6 +837,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(70, 3);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(174, 20);
             this.textBox1.TabIndex = 2;
             // 
@@ -827,6 +845,7 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(70, 31);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(174, 20);
             this.textBox2.TabIndex = 3;
             // 
@@ -834,9 +853,9 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label13.Location = new System.Drawing.Point(3, 286);
+            this.label13.Location = new System.Drawing.Point(3, 297);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(38, 21);
+            this.label13.Size = new System.Drawing.Size(38, 20);
             this.label13.TabIndex = 11;
             this.label13.Text = "Emploi";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -845,9 +864,9 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label14.Location = new System.Drawing.Point(3, 307);
+            this.label14.Location = new System.Drawing.Point(3, 317);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(56, 27);
+            this.label14.Size = new System.Drawing.Size(56, 25);
             this.label14.TabIndex = 12;
             this.label14.Text = "Employeur";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -855,16 +874,18 @@
             // textBox3
             // 
             this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox3.Location = new System.Drawing.Point(101, 289);
+            this.textBox3.Location = new System.Drawing.Point(101, 300);
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(268, 20);
             this.textBox3.TabIndex = 13;
             // 
             // textBox4
             // 
             this.textBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox4.Location = new System.Drawing.Point(101, 310);
+            this.textBox4.Location = new System.Drawing.Point(101, 320);
             this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(268, 20);
             this.textBox4.TabIndex = 14;
             // 
@@ -872,7 +893,8 @@
             // 
             this.chkb_ap_pere.AutoSize = true;
             this.table_infos_pere.SetColumnSpan(this.chkb_ap_pere, 2);
-            this.chkb_ap_pere.Location = new System.Drawing.Point(3, 349);
+            this.chkb_ap_pere.Enabled = false;
+            this.chkb_ap_pere.Location = new System.Drawing.Point(3, 366);
             this.chkb_ap_pere.Name = "chkb_ap_pere";
             this.chkb_ap_pere.Size = new System.Drawing.Size(109, 17);
             this.chkb_ap_pere.TabIndex = 15;
@@ -914,6 +936,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.lst_ets_scol);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -921,6 +944,16 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Scolarité / Formation";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // lst_ets_scol
+            // 
+            this.lst_ets_scol.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lst_ets_scol.Location = new System.Drawing.Point(3, 3);
+            this.lst_ets_scol.Name = "lst_ets_scol";
+            this.lst_ets_scol.Size = new System.Drawing.Size(768, 450);
+            this.lst_ets_scol.TabIndex = 0;
+            this.lst_ets_scol.UseCompatibleStateImageBehavior = false;
+            this.lst_ets_scol.SelectedIndexChanged += new System.EventHandler(this.lst_ets_scol_SelectedIndexChanged);
             // 
             // tabPage5
             // 
@@ -971,6 +1004,7 @@
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1047,6 +1081,7 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.ListView lst_ets_scol;
 
 
 
