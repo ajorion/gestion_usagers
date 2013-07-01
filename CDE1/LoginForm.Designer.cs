@@ -45,6 +45,7 @@
             this.Txt_Login.Name = "Txt_Login";
             this.Txt_Login.Size = new System.Drawing.Size(185, 20);
             this.Txt_Login.TabIndex = 0;
+            this.Txt_Login.Enter += new System.EventHandler(this.Txt_Login_Enter);
             // 
             // Txt_Pwd
             // 
@@ -53,6 +54,7 @@
             this.Txt_Pwd.Size = new System.Drawing.Size(185, 20);
             this.Txt_Pwd.TabIndex = 1;
             this.Txt_Pwd.UseSystemPasswordChar = true;
+            this.Txt_Pwd.Enter += new System.EventHandler(this.Txt_Pwd_Enter);
             // 
             // Btn_Login
             // 

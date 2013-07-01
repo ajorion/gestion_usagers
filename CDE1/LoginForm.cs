@@ -76,6 +76,17 @@ namespace gestion_usagers
 
         }
 
+        private void Txt_Login_Enter(object sender, EventArgs e)
+        {
+            Txt_Login.Clear();
+        }
+
+        private void Txt_Pwd_Enter(object sender, EventArgs e)
+        {
+            Txt_Pwd.Clear();
+        }
+
+
 
     }
 }

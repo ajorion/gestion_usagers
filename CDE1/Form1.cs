@@ -33,9 +33,28 @@ namespace gestion_usagers
             enfantsContext = new cdeEntities();
 
             var query = from enfants in enfantsContext.enfants
-                        select enfants;            
+                        select enfants;
 
 
+            StatusBar mainStatusBar = new StatusBar();
+
+            StatusBarPanel InfosPanel = new StatusBarPanel();
+            StatusBarPanel datePanel = new StatusBarPanel();
+            StatusBarPanel heurePanel = new StatusBarPanel();
+
+            InfosPanel.Text = "Connecté en tant que " + Environment.UserDomainName + "\\" + Environment.UserName;
+            InfosPanel.AutoSize = StatusBarPanelAutoSize.Spring;
+            mainStatusBar.Panels.Add(InfosPanel);
+
+            bg.Tick += (s, ev) => { heurePanel.Text = string.Format("{0:H:m}", DateTime.Now.ToString()); };
+            bg.Interval = 500;
+            bg.Start();
+            heurePanel.AutoSize = StatusBarPanelAutoSize.Spring;
+            mainStatusBar.Panels.Add(heurePanel);
+            
+            mainStatusBar.ShowPanels = true;
+
+            Controls.Add(mainStatusBar);
 
             this.listView1.View = System.Windows.Forms.View.Details;
 
@@ -64,36 +83,18 @@ namespace gestion_usagers
             
             var enfantsliste = enfantsContext.enfants.ToList();
 
+
             foreach (var enfant in enfantsliste)
                 {
+
                     ListViewItem lvi = new ListViewItem(enfant.num_dossier);
-                    lvi.SubItems.Add(enfant.nom_enfant.ToUpper() + enfant.prenom_enfant);
+                    lvi.SubItems.Add(enfant.nom_enfant.ToUpper()+enfant.prenom_enfant);
                     lvi.SubItems.Add(enfant.date_admission);
                     lvi.SubItems.Add(enfant.service);
 
                     listView1.Items.Add(lvi);
                 }
-                    
-            StatusBar mainStatusBar = new StatusBar();
-            
-            StatusBarPanel InfosPanel = new StatusBarPanel();
-            StatusBarPanel datePanel = new StatusBarPanel();
-            StatusBarPanel heurePanel = new StatusBarPanel();
-
-
-            InfosPanel.Text = "Connecté en tant que " + Environment.UserDomainName + "\\" + Environment.UserName;
-            InfosPanel.AutoSize = StatusBarPanelAutoSize.Spring;
-            mainStatusBar.Panels.Add(InfosPanel);
-
-            bg.Tick += (s, ev) => { heurePanel.Text = string.Format("{0:H:m}", DateTime.Now.ToString()); };
-            bg.Interval = 500;
-            bg.Start();
-            heurePanel.AutoSize = StatusBarPanelAutoSize.Contents;
-            mainStatusBar.Panels.Add(heurePanel);
-
-            mainStatusBar.ShowPanels = true;
-                        
-            Controls.Add(mainStatusBar);
+           
             
         }
 
@@ -167,6 +168,10 @@ namespace gestion_usagers
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void listView1_MouseUp(object sender, MouseEventArgs e)
+        {
         }
         
     }

@@ -67,6 +67,15 @@
             le contenu de cette méthode avec l'éditeur de code.
             </summary>
         </member>
+        <member name="M:gestion_usagers.Fonctions.IsAuthenticated(System.String,System.String)">
+            <summary>
+            Fonction utilisée pour l'identification dans l'application. 
+            (Utilisée uniquement durant le développement)
+            </summary>
+            <param name="utilisateur">Chaîne de caractères représentant le nom d'utilisateur.</param>
+            <param name="mdp">Chaîne de caractères représentant le mot de passe saisi.</param>
+            <returns>1 si l'authentification a réussi, 0 si elle a échoué.</returns>
+        </member>
         <member name="F:gestion_usagers.Form1.components">
             <summary>
             Variable nécessaire au concepteur.

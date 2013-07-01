@@ -11,7 +11,13 @@ namespace gestion_usagers
     {
         
         /* Fonction IsAuthenticated() utilisée pendant le developpement */
-        
+        /// <summary>
+        /// Fonction utilisée pour l'identification dans l'application. 
+        /// (Utilisée uniquement durant le développement)
+        /// </summary>
+        /// <param name="utilisateur">Chaîne de caractères représentant le nom d'utilisateur.</param>
+        /// <param name="mdp">Chaîne de caractères représentant le mot de passe saisi.</param>
+        /// <returns>1 si l'authentification a réussi, 0 si elle a échoué.</returns>
         public static bool IsAuthenticated(string utilisateur, string mdp)
         {
             bool authenticated = false;

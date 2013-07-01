@@ -39,7 +39,7 @@ namespace gestion_usagers
 
         private void ConsultDossier_Load(object sender, EventArgs e)
         {
-            var enfant = Db.getDossierEnfant(num_dossier);
+             var enfant = Db.getDossierEnfant(num_dossier);
 
             enfantsContext = new cdeEntities();
 
@@ -87,8 +87,8 @@ namespace gestion_usagers
                 this.Text = "Consultation d'un dossier : " + value.prenom_enfant + value.nom_enfant.ToUpper();
 
                 lbl_nomprenom.Text = value.nom_enfant + value.prenom_enfant;
-                toolStripLabel1.Text = value.num_dossier;
-                lbl_date_naiss.Text = value.date_naissance + value.lieu_naissance;
+                lbl_num_dossier.Text = value.num_dossier;
+                lbl_date_naiss.Text = (string.IsNullOrEmpty(value.lieu_naissance.ToString())) ? value.date_naissance : value.date_naissance + " à " + value.lieu_naissance; 
                 label5.Text = value.date_admission;
                 label6.Text = value.service;
 
@@ -251,6 +251,16 @@ namespace gestion_usagers
         private void lst_ets_scol_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
