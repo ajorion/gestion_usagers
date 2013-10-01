@@ -19,8 +19,7 @@ namespace gestion_usagers
             this.labelVersion.Text = String.Format("Version {0}", AssemblyVersion);
             this.labelCopyright.Text = AssemblyCopyright;
             this.labelCompanyName.Text = AssemblyCompany;
-            this.textBoxDescription.Text = String.Format("{0} {1} Site Internet : {2}", AssemblyDescription, Environment.NewLine, ConfigurationManager.AppSettings["url"]);
-
+            this.textBoxDescription.Text = String.Format("{0} {1} Site Internet : {2} {3}", AssemblyDescription, Environment.NewLine, Environment.NewLine, ConfigurationManager.AppSettings["url"]);
         }
 
         #region Accesseurs d'attribut de l'assembly

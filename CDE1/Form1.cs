@@ -14,7 +14,6 @@ namespace gestion_usagers
 {
     public partial class Form1 : Form
     {
-        //SQLiteConnection m_dbConnection;
 
         Timer bg = new Timer();
         private cdeEntities cdeContext;
@@ -24,8 +23,8 @@ namespace gestion_usagers
         public Form1()
         {
             InitializeComponent();
-            listView1.MouseDoubleClick += new MouseEventHandler(listView1_DoubleClick);
         }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -38,66 +37,34 @@ namespace gestion_usagers
 
             StatusBar mainStatusBar = new StatusBar();
 
-            StatusBarPanel helpPanel = new StatusBarPanel();
+            StatusBarPanel helpPanel = new StatusBarPanel() ;
             StatusBarPanel InfosPanel = new StatusBarPanel();
-            StatusBarPanel datePanel = new StatusBarPanel();
             StatusBarPanel heurePanel = new StatusBarPanel();
 
-
+            helpPanel.AutoSize = StatusBarPanelAutoSize.Spring;
             mainStatusBar.Panels.Add(helpPanel);
-            InfosPanel.Text = "Connecté en tant que " + Environment.UserDomainName + "\\" + Environment.UserName;
-            InfosPanel.AutoSize = StatusBarPanelAutoSize.Spring;
-            mainStatusBar.Panels.Add(InfosPanel);
 
             bg.Tick += (s, ev) => { heurePanel.Text = string.Format("{0:H:m}", DateTime.Now.ToString()); };
             bg.Interval = 500;
             bg.Start();
-            heurePanel.AutoSize = StatusBarPanelAutoSize.Spring;
+            //heurePanel.AutoSize = StatusBarPanelAutoSize.Spring;
+            heurePanel.Width = 200;
+            heurePanel.Alignment = HorizontalAlignment.Right;
             mainStatusBar.Panels.Add(heurePanel);
             
             mainStatusBar.ShowPanels = true;
 
-            Controls.Add(mainStatusBar);
-
-            this.listView1.View = System.Windows.Forms.View.Details;
-
-            ColumnHeader columnheader0 = new ColumnHeader();
-            columnheader0.Text = "Numéro Dossier";
+            Controls.Add(mainStatusBar);  
             
-            ColumnHeader columnheader1 = new ColumnHeader();
-            columnheader1.Text = "NOM - Prénom";
-            columnheader1.Width = 150;
-            columnheader1.TextAlign = HorizontalAlignment.Left;
-
-            ColumnHeader columnheader2 = new ColumnHeader();
-            columnheader2.Text = "Date d'admission";
-            columnheader2.Width = 120;
-            columnheader2.TextAlign = HorizontalAlignment.Left;
-
-            ColumnHeader columnheader3 = new ColumnHeader();
-            columnheader3.Text = "Service";
-            columnheader3.Width = 130;
-            columnheader3.TextAlign = HorizontalAlignment.Left;
-
-            listView1.Columns.Add(columnheader0);
-            listView1.Columns.Add(columnheader1);
-            listView1.Columns.Add(columnheader2);
-            listView1.Columns.Add(columnheader3);
+            InfosPanel.Text = "Connecté en tant que " + Environment.UserDomainName + "\\" + Environment.UserName;
+            //InfosPanel.AutoSize = StatusBarPanelAutoSize.Spring;
+            InfosPanel.Width = 200;
+            InfosPanel.Alignment = HorizontalAlignment.Right;
             
-            var enfantsliste = cdeContext.enfantsJeu.ToList();
+            mainStatusBar.Panels.Add(InfosPanel);
 
 
-            foreach (var enfant in query)
-                {
-
-                    ListViewItem lvi = new ListViewItem(enfant.num_dossier);
-                    lvi.SubItems.Add(string.Format("{0} {1}", enfant.nom_enfant.ToUpper(), enfant.prenom_enfant));
-                    lvi.SubItems.Add(enfant.date_admission);
-                    lvi.SubItems.Add(enfant.service);
-
-                    listView1.Items.Add(lvi);
-                }
-           
+                       
             
         }
 
@@ -127,7 +94,30 @@ namespace gestion_usagers
         {
             AdmissionForm admission_form = new AdmissionForm();
 
-            admission_form.ShowDialog();
+            AdmissionForm childForm = null;
+
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f is AdmissionForm)
+                {
+                    childForm = (AdmissionForm)f;
+                    break;
+                }
+            }
+
+            if (childForm != null)
+            {
+                childForm.Show();
+                childForm.Focus();
+                MessageBox.Show("Fenêtre \"" + childForm.Text + "\" déjà ouverte.");
+            }
+            else
+            {
+                childForm = new AdmissionForm();
+                childForm.MdiParent = this;
+                childForm.Show();
+                childForm.Focus();
+            }
 
         }
 
@@ -136,15 +126,6 @@ namespace gestion_usagers
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             
-        }
-
-        private void listView1_DoubleClick(object sender, MouseEventArgs e)
-        {
-            if (listView1.SelectedItems != null)
-            {
-                ConsultDossier consultForm = new ConsultDossier(listView1.SelectedItems[0].Text);
-                consultForm.ShowDialog();
-            }
         }
 
 
@@ -176,6 +157,36 @@ namespace gestion_usagers
         private void listView1_MouseUp(object sender, MouseEventArgs e)
         {
        
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            listeEnfants liste_form = new listeEnfants();
+
+            listeEnfants childForm = null;
+
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f is listeEnfants)
+                {
+                    childForm = (listeEnfants)f;
+                    break;
+                }
+            }
+
+            if (childForm != null)
+            {
+                childForm.Show();
+                childForm.Focus();
+                MessageBox.Show("Fenêtre \"" + childForm.Text + "\" déjà ouverte.");
+            }
+            else
+            {
+                childForm = new listeEnfants();
+                childForm.MdiParent = this;
+                childForm.Show();
+                childForm.Focus();
+            }
         }
         
     }

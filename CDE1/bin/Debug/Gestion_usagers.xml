@@ -132,20 +132,6 @@
             le contenu de cette méthode avec l'éditeur de code.
             </summary>
         </member>
-        <member name="T:gestion_usagers.Db">
-            <summary>
-             Classe gérant les appels à la base de données.
-             <para>Cette classe gère les différents appels à la base de données :
-            Insertion, Mise à jour, Suppression, Récupération d'informations diverses.
-            </para>
-            </summary>
-        </member>
-        <member name="M:gestion_usagers.Db.getUsagers">
-            <summary>
-            Fonction récupérant l'ensemble des des usagers
-            </summary>
-            <returns>SQLiteDataReader reader</returns>
-        </member>
         <member name="F:gestion_usagers.Program.logger">
             <summary>
             Point d'entrée principal de l'application.

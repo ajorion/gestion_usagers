@@ -34,21 +34,15 @@
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modulesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionDossiersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.admissionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rechercherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fenêtresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baseDeDonnéesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.menuStrip1.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -56,8 +50,10 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fichierToolStripMenuItem,
             this.modulesToolStripMenuItem,
+            this.fenêtresToolStripMenuItem,
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.MdiWindowListItem = this.fenêtresToolStripMenuItem;
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1008, 24);
             this.menuStrip1.TabIndex = 2;
@@ -74,8 +70,9 @@
             // 
             // quitterToolStripMenuItem
             // 
+            this.quitterToolStripMenuItem.Image = global::gestion_usagers.Properties.Resources.system_log_out;
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.quitterToolStripMenuItem.Text = "Quitter";
             this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 
@@ -90,6 +87,7 @@
             // gestionDossiersToolStripMenuItem
             // 
             this.gestionDossiersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem2,
             this.admissionToolStripMenuItem,
             this.rechercherToolStripMenuItem,
             this.editionToolStripMenuItem});
@@ -98,11 +96,19 @@
             this.gestionDossiersToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.gestionDossiersToolStripMenuItem.Text = "Gestion dossiers";
             // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Image = global::gestion_usagers.Properties.Resources.application_view_list;
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(161, 22);
+            this.toolStripMenuItem2.Text = "Liste des enfants";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            // 
             // admissionToolStripMenuItem
             // 
             this.admissionToolStripMenuItem.Image = global::gestion_usagers.Properties.Resources.list_add;
             this.admissionToolStripMenuItem.Name = "admissionToolStripMenuItem";
-            this.admissionToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.admissionToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.admissionToolStripMenuItem.Text = "Admission";
             this.admissionToolStripMenuItem.Click += new System.EventHandler(this.admissionToolStripMenuItem_Click);
             // 
@@ -110,15 +116,21 @@
             // 
             this.rechercherToolStripMenuItem.Image = global::gestion_usagers.Properties.Resources.system_search;
             this.rechercherToolStripMenuItem.Name = "rechercherToolStripMenuItem";
-            this.rechercherToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.rechercherToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.rechercherToolStripMenuItem.Text = "Rechercher";
             // 
             // editionToolStripMenuItem
             // 
             this.editionToolStripMenuItem.Image = global::gestion_usagers.Properties.Resources.edit_find_replace;
             this.editionToolStripMenuItem.Name = "editionToolStripMenuItem";
-            this.editionToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.editionToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.editionToolStripMenuItem.Text = "Edition";
+            // 
+            // fenêtresToolStripMenuItem
+            // 
+            this.fenêtresToolStripMenuItem.Name = "fenêtresToolStripMenuItem";
+            this.fenêtresToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this.fenêtresToolStripMenuItem.Text = "Fenêtres";
             // 
             // toolStripMenuItem1
             // 
@@ -141,91 +153,17 @@
             this.baseDeDonnéesToolStripMenuItem.Name = "baseDeDonnéesToolStripMenuItem";
             this.baseDeDonnéesToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
             // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.AutoScroll = true;
-            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.Window;
-            this.tableLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.24012F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.75988F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-            this.tableLayoutPanel1.Controls.Add(this.groupBox2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 24);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.17847F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.82153F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1008, 706);
-            this.tableLayoutPanel1.TabIndex = 3;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.listView2);
-            this.groupBox2.Location = new System.Drawing.Point(3, 209);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(463, 195);
-            this.groupBox2.TabIndex = 6;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Prochaines audiences";
-            // 
-            // listView2
-            // 
-            this.listView2.Alignment = System.Windows.Forms.ListViewAlignment.SnapToGrid;
-            this.listView2.FullRowSelect = true;
-            this.listView2.GridLines = true;
-            this.listView2.Location = new System.Drawing.Point(6, 19);
-            this.listView2.MultiSelect = false;
-            this.listView2.Name = "listView2";
-            this.listView2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.listView2.ShowGroups = false;
-            this.listView2.ShowItemToolTips = true;
-            this.listView2.Size = new System.Drawing.Size(451, 160);
-            this.listView2.TabIndex = 5;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.List;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.listView1);
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(463, 195);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Dernières admissions";
-            // 
-            // listView1
-            // 
-            this.listView1.Alignment = System.Windows.Forms.ListViewAlignment.SnapToGrid;
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(6, 19);
-            this.listView1.MultiSelect = false;
-            this.listView1.Name = "listView1";
-            this.listView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.listView1.ShowGroups = false;
-            this.listView1.ShowItemToolTips = true;
-            this.listView1.Size = new System.Drawing.Size(451, 160);
-            this.listView1.TabIndex = 5;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.List;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged_1);
-            this.listView1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseUp);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::gestion_usagers.Properties.Resources.logo_CDE;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1008, 730);
-            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(1024, 768);
             this.Name = "Form1";
@@ -236,9 +174,6 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,11 +192,8 @@
         private System.Windows.Forms.ToolStripMenuItem rechercherToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem baseDeDonnéesToolStripMenuItem;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ToolStripMenuItem fenêtresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
 
     }
 }

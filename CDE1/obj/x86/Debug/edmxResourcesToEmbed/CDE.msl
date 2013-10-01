@@ -1,18 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="cdeModelStoreContainer" CdmEntityContainer="cdeEntities">
-    <EntitySetMapping Name="enfants">
-      <EntityTypeMapping TypeName="cdeModel.enfants">
-        <MappingFragment StoreEntitySet="enfants">
-          <ScalarProperty Name="demande_de" ColumnName="demande_de" />
-          <ScalarProperty Name="modalites" ColumnName="modalites" />
-          <ScalarProperty Name="service" ColumnName="service" />
-          <ScalarProperty Name="date_admission" ColumnName="date_admission" />
-          <ScalarProperty Name="lieu_naissance" ColumnName="lieu_naissance" />
-          <ScalarProperty Name="date_naissance" ColumnName="date_naissance" />
-          <ScalarProperty Name="prenom_enfant" ColumnName="prenom_enfant" />
-          <ScalarProperty Name="nom_enfant" ColumnName="nom_enfant" />
+    <EntitySetMapping Name="enfantsJeu">
+      <EntityTypeMapping TypeName="IsTypeOf(cdeModel.enfants)">
+        <MappingFragment StoreEntitySet="enfantsJeu">
+          <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="num_dossier" ColumnName="num_dossier" />
+          <ScalarProperty Name="date_admission" ColumnName="date_admission" />
+          <ScalarProperty Name="nom_enfant" ColumnName="nom_enfant" />
+          <ScalarProperty Name="prenom_enfant" ColumnName="prenom_enfant" />
+          <ScalarProperty Name="service" ColumnName="service" />
+          <ScalarProperty Name="date_naissance" ColumnName="date_naissance" />
+          <ScalarProperty Name="lieu_naissance" ColumnName="lieu_naissance" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

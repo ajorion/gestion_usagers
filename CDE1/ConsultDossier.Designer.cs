@@ -30,8 +30,6 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_nomprenom = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.sexe_img = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -85,8 +83,8 @@
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txb_phonepere = new System.Windows.Forms.TextBox();
+            this.txb_mobilepere = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -99,9 +97,9 @@
             this.lst_ets_scol = new System.Windows.Forms.ListView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.sexe_img = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sexe_img)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -118,6 +116,8 @@
             this.tableLayoutPanel6.SuspendLayout();
             this.tabStatut.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sexe_img)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -156,28 +156,6 @@
             this.lbl_nomprenom.Text = "label1";
             this.lbl_nomprenom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl_nomprenom.Click += new System.EventHandler(this.lbl_nomprenom_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.ErrorImage = null;
-            this.pictureBox1.Image = global::gestion_usagers.Properties.Resources._1371235139_Child_Male_Light;
-            this.pictureBox1.Location = new System.Drawing.Point(684, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.tableLayoutPanel1.SetRowSpan(this.pictureBox1, 2);
-            this.pictureBox1.Size = new System.Drawing.Size(127, 128);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // sexe_img
-            // 
-            this.sexe_img.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.sexe_img.Dock = System.Windows.Forms.DockStyle.Left;
-            this.sexe_img.Location = new System.Drawing.Point(684, 137);
-            this.sexe_img.Name = "sexe_img";
-            this.sexe_img.Size = new System.Drawing.Size(106, 38);
-            this.sexe_img.TabIndex = 4;
-            this.sexe_img.TabStop = false;
             // 
             // tableLayoutPanel2
             // 
@@ -811,8 +789,8 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.35593F));
             this.tableLayoutPanel6.Controls.Add(this.label11, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.label12, 0, 1);
-            this.tableLayoutPanel6.Controls.Add(this.textBox1, 1, 0);
-            this.tableLayoutPanel6.Controls.Add(this.textBox2, 1, 1);
+            this.tableLayoutPanel6.Controls.Add(this.txb_phonepere, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.txb_mobilepere, 1, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
@@ -844,21 +822,21 @@
             this.label12.Text = "Portable";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox1
+            // txb_phonepere
             // 
-            this.textBox1.Location = new System.Drawing.Point(70, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(174, 20);
-            this.textBox1.TabIndex = 2;
+            this.txb_phonepere.Location = new System.Drawing.Point(70, 3);
+            this.txb_phonepere.Name = "txb_phonepere";
+            this.txb_phonepere.ReadOnly = true;
+            this.txb_phonepere.Size = new System.Drawing.Size(174, 20);
+            this.txb_phonepere.TabIndex = 2;
             // 
-            // textBox2
+            // txb_mobilepere
             // 
-            this.textBox2.Location = new System.Drawing.Point(70, 31);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(174, 20);
-            this.textBox2.TabIndex = 3;
+            this.txb_mobilepere.Location = new System.Drawing.Point(70, 31);
+            this.txb_mobilepere.Name = "txb_mobilepere";
+            this.txb_mobilepere.ReadOnly = true;
+            this.txb_mobilepere.Size = new System.Drawing.Size(174, 20);
+            this.txb_mobilepere.TabIndex = 3;
             // 
             // label13
             // 
@@ -987,6 +965,28 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.ErrorImage = null;
+            this.pictureBox1.Image = global::gestion_usagers.Properties.Resources._1371235139_Child_Male_Light;
+            this.pictureBox1.Location = new System.Drawing.Point(684, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.tableLayoutPanel1.SetRowSpan(this.pictureBox1, 2);
+            this.pictureBox1.Size = new System.Drawing.Size(127, 128);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // sexe_img
+            // 
+            this.sexe_img.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.sexe_img.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sexe_img.Location = new System.Drawing.Point(684, 137);
+            this.sexe_img.Name = "sexe_img";
+            this.sexe_img.Size = new System.Drawing.Size(106, 38);
+            this.sexe_img.TabIndex = 4;
+            this.sexe_img.TabStop = false;
+            // 
             // ConsultDossier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -998,13 +998,11 @@
             this.MaximumSize = new System.Drawing.Size(811, 750);
             this.MinimumSize = new System.Drawing.Size(811, 750);
             this.Name = "ConsultDossier";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConsultDossier";
             this.Load += new System.EventHandler(this.ConsultDossier_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sexe_img)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel5.ResumeLayout(false);
@@ -1027,6 +1025,8 @@
             this.tableLayoutPanel6.PerformLayout();
             this.tabStatut.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sexe_img)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1060,8 +1060,8 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txb_phonepere;
+        private System.Windows.Forms.TextBox txb_mobilepere;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox textBox3;

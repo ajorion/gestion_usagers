@@ -2,7 +2,7 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="gestion_usagers.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="url" Type="System.String" Scope="Application">
+    <Setting Name="url" Type="System.String" Scope="User">
       <Value Profile="(Default)">http://ajorion.github.io/gestion_usagers/</Value>
     </Setting>
   </Settings>

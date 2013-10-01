@@ -22,5 +22,17 @@ namespace gestion_usagers
         public string service { get; set; }
         public string date_naissance { get; set; }
         public string lieu_naissance { get; set; }
+        public string modalite_accueil { get; set; }
+        public string demande_de { get; set; }
+        public string provenance { get; set; }
+        public string nom_pere { get; set; }
+        public string prenom_pere { get; set; }
+        public string dn_pere { get; set; }
+        public string ln_pere { get; set; }
+        public string adresse_pere { get; set; }
+        public string cp_pere { get; set; }
+        public string ville_pere { get; set; }
+        public string tel_pere { get; set; }
+        public string mobile_pere { get; set; }
     }
 }

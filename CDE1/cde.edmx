@@ -19,7 +19,19 @@
     <Property Name="prenom_enfant" Type="nvarchar(max)" Nullable="false" />
     <Property Name="service" Type="nvarchar(max)" Nullable="false" />
     <Property Name="date_naissance" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="lieu_naissance" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="lieu_naissance" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="modalite_accueil" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="demande_de" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="provenance" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="nom_pere" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="prenom_pere" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="dn_pere" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ln_pere" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="adresse_pere" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="cp_pere" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ville_pere" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="tel_pere" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="mobile_pere" Type="nvarchar(max)" Nullable="true" />
   </EntityType>
 </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -39,7 +51,19 @@
           <Property Type="String" Name="prenom_enfant" Nullable="false" />
           <Property Type="String" Name="service" Nullable="false" />
           <Property Type="String" Name="date_naissance" Nullable="false" />
-          <Property Type="String" Name="lieu_naissance" Nullable="false" />
+          <Property Type="String" Name="lieu_naissance" Nullable="true" />
+          <Property Type="String" Name="modalite_accueil" Nullable="false" />
+          <Property Type="String" Name="demande_de" Nullable="true" />
+          <Property Type="String" Name="provenance" Nullable="true" />
+          <Property Type="String" Name="nom_pere" Nullable="false" />
+          <Property Type="String" Name="prenom_pere" Nullable="false" />
+          <Property Type="String" Name="dn_pere" Nullable="false" />
+          <Property Type="String" Name="ln_pere" Nullable="true" />
+          <Property Type="String" Name="adresse_pere" Nullable="false" />
+          <Property Type="String" Name="cp_pere" Nullable="false" />
+          <Property Type="String" Name="ville_pere" Nullable="false" />
+          <Property Type="String" Name="tel_pere" Nullable="true" />
+          <Property Type="String" Name="mobile_pere" Nullable="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -58,6 +82,18 @@
           <ScalarProperty Name="service" ColumnName="service" />
           <ScalarProperty Name="date_naissance" ColumnName="date_naissance" />
           <ScalarProperty Name="lieu_naissance" ColumnName="lieu_naissance" />
+          <ScalarProperty Name="modalite_accueil" ColumnName="modalite_accueil" />
+          <ScalarProperty Name="demande_de" ColumnName="demande_de" />
+          <ScalarProperty Name="provenance" ColumnName="provenance" />
+          <ScalarProperty Name="nom_pere" ColumnName="nom_pere" />
+          <ScalarProperty Name="prenom_pere" ColumnName="prenom_pere" />
+          <ScalarProperty Name="dn_pere" ColumnName="dn_pere" />
+          <ScalarProperty Name="ln_pere" ColumnName="ln_pere" />
+          <ScalarProperty Name="adresse_pere" ColumnName="adresse_pere" />
+          <ScalarProperty Name="cp_pere" ColumnName="cp_pere" />
+          <ScalarProperty Name="ville_pere" ColumnName="ville_pere" />
+          <ScalarProperty Name="tel_pere" ColumnName="tel_pere" />
+          <ScalarProperty Name="mobile_pere" ColumnName="mobile_pere" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

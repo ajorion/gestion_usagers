@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.Data.Objects;
 using System.Data.Objects.DataClasses;
 using NLog;
+using System.Globalization;
 
 namespace gestion_usagers
 {
@@ -17,11 +18,9 @@ namespace gestion_usagers
     /// </summary>
     public partial class ConsultDossier : Form
     {
-        public string num_dossier;
+        public int n_id;
         private static Logger logger = LogManager.GetCurrentClassLogger();
         private cdeEntities enfantsContext;
-
-        //SQLiteConnection m_dbConnection; 
 
         /// <summary>
         /// 
@@ -29,23 +28,23 @@ namespace gestion_usagers
         /// <param name="dossier">Permet de récupérer l'ID du dossier de l'usager concerné
         /// afin de récupérer les informations de la base de données.
         /// </param>
-        public ConsultDossier(string dossier)
+        
+        public ConsultDossier(int id)
         {
             InitializeComponent();
             
-            num_dossier = dossier;
+            n_id = id;
             
         }
 
         private void ConsultDossier_Load(object sender, EventArgs e)
         {
-             var enfant = Db.getDossierEnfant(num_dossier);
 
             enfantsContext = new cdeEntities();
 
             
             var query = from enfants in enfantsContext.enfantsJeu
-                        where enfants.num_dossier == num_dossier
+                        where enfants.ID == n_id
                         select enfants;
             
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -91,73 +90,15 @@ namespace gestion_usagers
                 lbl_date_naiss.Text = (string.IsNullOrEmpty(value.lieu_naissance.ToString())) ? value.date_naissance : value.date_naissance + " à " + value.lieu_naissance; 
                 label5.Text = value.date_admission;
                 label6.Text = value.service;
-
+                txb_nom_pere.Text = value.nom_pere;
+                txb_nais_pere.Text = (string.IsNullOrEmpty(value.ln_pere)) ? value.dn_pere : value.dn_pere + " à " + value.ln_pere;
+                txb_adrr_pere.Text = value.adresse_pere;
+                txb_cp_pere.Text = value.cp_pere;
+                txb_ville_pere.Text = value.ville_pere;
+                txb_phonepere.Text = (string.IsNullOrEmpty(value.tel_pere)) ? "*" : value.tel_pere;
+                txb_mobilepere.Text = (string.IsNullOrEmpty(value.mobile_pere)) ? "*" : value.mobile_pere;
             }
-            /*
-            try
-            {
-                while (enfant.Read())
-                {
-                    this.Text = "Consultation d'un dossier : " + enfant["prenom"].ToString() + " " + enfant["nom"].ToString();
-                    lbl_nomprenom.Text = enfant["nom"].ToString().ToUpper() + " " + enfant["prenom"].ToString();
-                    toolStripLabel1.Text = "N° dossier : " + enfant["num_dossier"].ToString();
-                    lbl_date_naiss.Text = enfant["date_naissance"].ToString() + " à " + enfant["lieu_naissance"].ToString();
-                    label5.Text = enfant["date_admission"].ToString();
-                    label6.Text = enfant["service"].ToString();
-                     
-                    txb_nom_pere.Text = enfant["nom_pere"].ToString();
-                    txb_nais_pere.Text = enfant["dn_pere"].ToString();
-                    txb_adrr_pere.Text = enfant["adresse_pere"].ToString();
-                    txb_cp_pere.Text = enfant["cp_pere"].ToString();
-                    txb_ville_pere.Text = enfant["ville_pere"].ToString();
-
-                    txb_nom_mere.Text = enfant["nom_mere"].ToString();
-                    txb_nais_mere.Text = enfant["dn_mere"].ToString();
-                    txb_addr_mere.Text = enfant["adresse_mere"].ToString();
-                    txb_cp_mere.Text = enfant["cp_mere"].ToString();
-                    txb_ville_mere.Text = enfant["ville_mere"].ToString();
-
-                   
-                    if (enfant["sexe"].ToString() == "m")
-                    {
-                        sexe_img.Image = Properties.Resources._1371236677_male;
-                        sexe_img.SizeMode = PictureBoxSizeMode.CenterImage;
-                    }
-                    if (enfant["sexe"].ToString() == "f")
-                    {
-                        sexe_img.Image = Properties.Resources._1371236480_female;
-                        sexe_img.SizeMode = PictureBoxSizeMode.CenterImage;
-                    }
-
-                    // TODO: voir pour changer de méthode car là, c'est un peu sale...
-                    if (enfant["ap_pere"].ToString() == "1")
-                    {
-                        chkb_ap_pere.Checked = true;
-                    }
-
-                    if (enfant["ap_mere"].ToString() == "1")
-                    {
-                        chkb_ap_mere.Checked = true;
-                    }
-
-                    var status = Db.listeStatuts(enfant["num_dossier"].ToString());
-                    while (status.Read())
-                    {
-                        ListViewItem lvi = new ListViewItem(status["type_statut"].ToString());
-                        lvi.SubItems.Add(status["date_debut"].ToString());
-                        lvi.SubItems.Add(status["date_fin"].ToString());
-                        lvi.SubItems.Add(status["nom_juge"].ToString() + " - " + status["tpe"].ToString());
-                        lvi.SubItems.Add(status["date_audience"].ToString());
-                        listView1.Items.Add(lvi);
-                        
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                logger.Error(ex.Message);
-            }
-        */
+           
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
