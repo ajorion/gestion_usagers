@@ -25,6 +25,6 @@ namespace gestion_usagers
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<enfants> enfants { get; set; }
+        public DbSet<enfants> enfantsJeu { get; set; }
     }
 }

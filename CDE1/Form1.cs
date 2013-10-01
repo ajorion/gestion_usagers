@@ -17,7 +17,7 @@ namespace gestion_usagers
         //SQLiteConnection m_dbConnection;
 
         Timer bg = new Timer();
-        private cdeEntities enfantsContext;
+        private cdeEntities cdeContext;
         private static Logger logger = LogManager.GetCurrentClassLogger();
 
 
@@ -30,18 +30,21 @@ namespace gestion_usagers
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            enfantsContext = new cdeEntities();
+            cdeContext = new cdeEntities();
 
-            var query = from enfants in enfantsContext.enfants
-                        select enfants;
 
+            var query = from enfants in cdeContext.enfantsJeu
+                        select enfants;            
 
             StatusBar mainStatusBar = new StatusBar();
 
+            StatusBarPanel helpPanel = new StatusBarPanel();
             StatusBarPanel InfosPanel = new StatusBarPanel();
             StatusBarPanel datePanel = new StatusBarPanel();
             StatusBarPanel heurePanel = new StatusBarPanel();
 
+
+            mainStatusBar.Panels.Add(helpPanel);
             InfosPanel.Text = "Connecté en tant que " + Environment.UserDomainName + "\\" + Environment.UserName;
             InfosPanel.AutoSize = StatusBarPanelAutoSize.Spring;
             mainStatusBar.Panels.Add(InfosPanel);
@@ -81,14 +84,14 @@ namespace gestion_usagers
             listView1.Columns.Add(columnheader2);
             listView1.Columns.Add(columnheader3);
             
-            var enfantsliste = enfantsContext.enfants.ToList();
+            var enfantsliste = cdeContext.enfantsJeu.ToList();
 
 
-            foreach (var enfant in enfantsliste)
+            foreach (var enfant in query)
                 {
 
                     ListViewItem lvi = new ListViewItem(enfant.num_dossier);
-                    lvi.SubItems.Add(enfant.nom_enfant.ToUpper()+enfant.prenom_enfant);
+                    lvi.SubItems.Add(string.Format("{0} {1}", enfant.nom_enfant.ToUpper(), enfant.prenom_enfant));
                     lvi.SubItems.Add(enfant.date_admission);
                     lvi.SubItems.Add(enfant.service);
 
@@ -139,8 +142,8 @@ namespace gestion_usagers
         {
             if (listView1.SelectedItems != null)
             {
-                ConsultDossier c_d = new ConsultDossier(listView1.SelectedItems[0].Text);
-                c_d.ShowDialog();
+                ConsultDossier consultForm = new ConsultDossier(listView1.SelectedItems[0].Text);
+                consultForm.ShowDialog();
             }
         }
 
@@ -172,6 +175,7 @@ namespace gestion_usagers
 
         private void listView1_MouseUp(object sender, MouseEventArgs e)
         {
+       
         }
         
     }

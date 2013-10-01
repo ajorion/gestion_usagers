@@ -14,14 +14,13 @@ namespace gestion_usagers
     
     public partial class enfants
     {
+        public int ID { get; set; }
         public string num_dossier { get; set; }
+        public string date_admission { get; set; }
         public string nom_enfant { get; set; }
         public string prenom_enfant { get; set; }
+        public string service { get; set; }
         public string date_naissance { get; set; }
         public string lieu_naissance { get; set; }
-        public string date_admission { get; set; }
-        public string service { get; set; }
-        public string modalites { get; set; }
-        public string demande_de { get; set; }
     }
 }

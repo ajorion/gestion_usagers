@@ -44,7 +44,7 @@ namespace gestion_usagers
             enfantsContext = new cdeEntities();
 
             
-            var query = from enfants in enfantsContext.enfants
+            var query = from enfants in enfantsContext.enfantsJeu
                         where enfants.num_dossier == num_dossier
                         select enfants;
             
@@ -84,9 +84,9 @@ namespace gestion_usagers
 
             foreach (var value in query)
             {
-                this.Text = "Consultation d'un dossier : " + value.prenom_enfant + value.nom_enfant.ToUpper();
+                this.Text = string.Format(@"Consultation d'un dossier : {0} {1}", value.prenom_enfant, value.nom_enfant.ToUpper());
 
-                lbl_nomprenom.Text = value.nom_enfant + value.prenom_enfant;
+                lbl_nomprenom.Text = string.Format(@"{0} {1}", value.nom_enfant, value.prenom_enfant);
                 lbl_num_dossier.Text = value.num_dossier;
                 lbl_date_naiss.Text = (string.IsNullOrEmpty(value.lieu_naissance.ToString())) ? value.date_naissance : value.date_naissance + " à " + value.lieu_naissance; 
                 label5.Text = value.date_admission;
