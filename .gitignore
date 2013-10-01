@@ -8,12 +8,12 @@
 
 # Build results
 
-[Dd]ebug/
-[Rr]elease/
-x64/
-build/
-[Bb]in/
-[Oo]bj/
+CDE1/[Dd]ebug/
+CDE1/[Rr]elease/
+CDE1/x64/
+CDE1/build/
+CDE1/[Bb]in/
+CDE1/[Oo]bj/
 
 # Enable "build/" folder in the NuGet Packages folder since NuGet packages use it for MSBuild targets
 !packages/*/build/
