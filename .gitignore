@@ -22,6 +22,7 @@ CDE1/[Oo]bj/
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
 
+CDE1/*.sql
 *_i.c
 *_p.c
 *.ilk
